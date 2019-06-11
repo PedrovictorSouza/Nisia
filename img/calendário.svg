@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 206.8 1366" style="enable-background:new 0 0 206.8 1366;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{font-family:'AcuminConcept-Regular';}
+	.st2{font-size:15.9965px;}
+	.st3{letter-spacing:3;}
+	.st4{fill:none;stroke:#FFFFFF;stroke-width:7;stroke-miterlimit:10;}
+	.st5{fill:#DB4442;}
+	.st6{font-family:'AcuminConcept-Bold';}
+	.st7{fill:none;stroke:#DB4442;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<g>
+	<text transform="matrix(0.8391 0.544 -0.544 0.8391 65.8088 55.4884)" class="st0 st1 st2 st3">JAN</text>
+</g>
+<line class="st4" x1="128.6" y1="87.4" x2="128.4" y2="1297.7"/>
+<circle class="st0" cx="128.6" cy="85.8" r="9.3"/>
+<g>
+	<text transform="matrix(0.8391 0.544 -0.544 0.8391 65.8078 165.5918)" class="st0 st1 st2 st3">FEV</text>
+</g>
+<ellipse transform="matrix(0.9999 -1.626744e-02 1.626744e-02 0.9999 -3.1703 2.1186)" class="st0" cx="128.6" cy="195.9" rx="9.3" ry="9.3"/>
+<g>
+	<text transform="matrix(0.8391 0.544 -0.544 0.8391 65.809 275.6937)" class="st0 st1 st2 st3">MAR</text>
+</g>
+<path class="st0" d="M128.4,318.9c-5.2,0.3-9.2-5.2-9.1-12.3c0.1-7.1,4.4-13.2,9.6-13.5c5.2-0.3,9.2,5.2,9.1,12.3
+	C137.9,312.5,133.6,318.6,128.4,318.9z"/>
+<g>
+	<text transform="matrix(0.8391 0.544 -0.544 0.8391 65.8085 385.7963)" class="st0 st1 st2 st3">ABR</text>
+</g>
+<ellipse transform="matrix(0.9999 -1.626744e-02 1.626744e-02 0.9999 -6.7525 2.1477)" class="st0" cx="128.6" cy="416.1" rx="9.3" ry="9.3"/>
+<g>
+	<text transform="matrix(0.8391 0.544 -0.544 0.8391 65.8091 495.899)" class="st5 st6 st2 st3">MAI</text>
+</g>
+<ellipse transform="matrix(0.9999 -1.626744e-02 1.626744e-02 0.9999 -8.5435 2.1623)" class="st5" cx="128.6" cy="526.2" rx="9.3" ry="9.3"/>
+<g>
+	<text transform="matrix(0.8391 0.544 -0.544 0.8391 65.8086 606.0015)" class="st0 st1 st2 st3">JUN</text>
+</g>
+<ellipse transform="matrix(0.9999 -1.626744e-02 1.626744e-02 0.9999 -10.3346 2.1769)" class="st0" cx="128.6" cy="636.3" rx="9.3" ry="9.3"/>
+<g>
+	<text transform="matrix(0.8391 0.544 -0.544 0.8391 65.8089 716.1028)" class="st0 st1 st2 st3">JUL</text>
+</g>
+<ellipse transform="matrix(0.9999 -1.626744e-02 1.626744e-02 0.9999 -12.1257 2.1915)" class="st0" cx="128.6" cy="746.4" rx="9.3" ry="9.3"/>
+<g>
+	<text transform="matrix(0.8391 0.544 -0.544 0.8391 65.8087 826.205)" class="st0 st1 st2 st3">AGO</text>
+</g>
+<ellipse transform="matrix(0.9999 -1.626744e-02 1.626744e-02 0.9999 -13.9168 2.206)" class="st0" cx="128.6" cy="856.5" rx="9.3" ry="9.3"/>
+<g>
+	<text transform="matrix(0.8391 0.544 -0.544 0.8391 65.8082 936.3076)" class="st0 st1 st2 st3">SET</text>
+</g>
+<ellipse transform="matrix(0.9999 -1.626744e-02 1.626744e-02 0.9999 -15.7078 2.2206)" class="st0" cx="128.6" cy="966.6" rx="9.3" ry="9.3"/>
+<g>
+	<text transform="matrix(0.8391 0.544 -0.544 0.8391 65.808 1046.4098)" class="st0 st1 st2 st3">OUT</text>
+</g>
+<ellipse transform="matrix(0.9999 -1.626744e-02 1.626744e-02 0.9999 -17.4989 2.2352)" class="st0" cx="128.6" cy="1076.7" rx="9.3" ry="9.3"/>
+<g>
+	<text transform="matrix(0.8391 0.544 -0.544 0.8391 65.8089 1156.5121)" class="st0 st1 st2 st3">NOV</text>
+</g>
+<ellipse transform="matrix(0.9999 -1.626744e-02 1.626744e-02 0.9999 -19.29 2.2497)" class="st0" cx="128.6" cy="1186.8" rx="9.3" ry="9.3"/>
+<g>
+	<text transform="matrix(0.8391 0.544 -0.544 0.8391 65.8086 1266.6143)" class="st0 st1 st2 st3">DEZ</text>
+</g>
+<ellipse transform="matrix(0.9999 -1.626744e-02 1.626744e-02 0.9999 -21.0811 2.2643)" class="st0" cx="128.6" cy="1297" rx="9.3" ry="9.3"/>
+<ellipse transform="matrix(0.9999 -1.626744e-02 1.626744e-02 0.9999 -8.5435 2.1623)" class="st7" cx="128.6" cy="526.2" rx="23.7" ry="23.7"/>
+</svg>

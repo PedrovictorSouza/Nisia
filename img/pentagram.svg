@@ -1,0 +1,28 @@
+<svg id="pp Capa_1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1091.7 1091.7" style="enable-background:new 0 0 1091.7 1091.7;" xml:space="preserve">
+<line class="st0" x1="283.4" y1="138.5" x2="111.7" y2="672.7"/>
+<circle class="st1" cx="288.3" cy="138.2" r="15.5"/>
+<line class="st0" x1="1019.6" y1="669.8" x2="844.5" y2="136.7"/>
+<line class="st0" x1="566.7" y1="1001" x2="1019.6" y2="669.8"/>
+<line class="st0" x1="111.7" y1="672.7" x2="566.7" y2="1001"/>
+<line class="st2" x1="844.5" y1="136.7" x2="283.4" y2="138.5"/>
+<text id="text1" onclick="rotatePentagon(2)" transform="matrix(1 0 0 1 288.0636 60.9699)" class="st0 st1 st2 st3">>A MENTORA</text>
+<g>
+	<polygon class="st7" points="758.3,184.3 291.9,230.7 192,688.6 596.5,925.1 946.5,613.5 	"/>
+	<polygon class="st7" points="663.5,196.8 274.5,324.7 276,734.2 665.9,859.3 905.3,527.2 	"/>
+	<polygon class="st7" points="593.8,225.7 280.5,399.9 349.4,751.7 705.3,795 856.3,469.9 	"/>
+	<polygon class="st7" points="525.3,270.8 302.3,479 431.3,755.5 734.1,718.2 792.3,418.7 	"/>
+</g>
+<g class="st8">
+	<text id="text2" onclick="rotatePentagon(4)" transform="matrix(-0.8076 0.5898 -0.5898 -0.8076 1049.6862 722.519)" class="st0 st1 st2 st3">A EMPREENDEDORA</text>
+</g>
+<g class="st8">
+	<text id="text3" onclick="rotatePentagon(0)" transform="matrix(-0.8109 -0.5852 0.5852 -0.8109 523.4828 1037.5326)" class="st0 st1 st2">A PROGRAMADORA</text>
+</g>
+<g class="st8">
+	<text id="text4" onclick="rotatePentagon(1)" transform="matrix(0.3178 -0.9482 0.9482 0.3178 49.1521 632.1315)" class="st0 st1 st2">A ESTUDANTE</text>
+</g>
+<g class="st8">
+	<text id="text5" onclick="rotatePentagon(3)" transform="matrix(0.3097 0.9508 -0.9508 0.3097 898.7365 124.4901)" class="st0 st1 st2">A EDUCADORA</text>
+</g>
+</svg>
