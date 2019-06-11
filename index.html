@@ -16,26 +16,26 @@
 		<nav data-aos="fade-down">
 			<!-- AQUI FICA A LOGO (SVG) -->
 			<a class="logo-a" href="#home" data-aos="fade-left" data-aos-duration="1000"><img  id="logo logo-btn" src="./logo_mt.svg" alt=""></a>
-			<a class="grid-one" onclick="menuClicked()"></a>
+			<a class="grid-one" onclick="toggleMenu()"></a>
 
 			</div>  
-			<ul class="menu">
-				<li data-aos="fade-left" data-aos-duration="1000"><a>BLOG</a></li>	
-				<li data-aos="fade-left" data-aos-duration="1500"><a href="#project">O PROJETO</a></li>
-				<li data-aos="fade-left" data-aos-duration="2000"><a href="#mulheres">PERFIS</a></li>	
+			<ul id="menu-box" class="menu">
+				<li data-aos="fade-left" data-aos-duration="1000"><a onclick="toggleMenu()">BLOG</a></li>	
+				<li data-aos="fade-left" data-aos-duration="1500"><a href="#project" onclick="toggleMenu()">O PROJETO</a></li>
+				<li data-aos="fade-left" data-aos-duration="2000"><a href="#mulheres" onclick="toggleMenu()">PERFIS</a></li>	
 				<div class="dropdown">
 					<button class="dropbtn" data-aos="fade-left" data-aos-duration="2500">3 PASSOS 
 					  <i class="fa fa-caret-down"></i>
 					</button>
 					<div class="dropdown-content">
-					  <a href="#ecossistema">ECOSSISTEMA</a>
-					  <a href="#sistema">SISTEMA</a>
-					  <a href="#ecos__do__sistema">ECOS DO SISTEMA</a>
+					  <a href="#ecossistema" onclick="toggleMenu()">ECOSSISTEMA</a>
+					  <a href="#sistema" onclick="toggleMenu()">SISTEMA</a>
+					  <a href="#ecos__do__sistema" onclick="toggleMenu()">ECOS DO SISTEMA</a>
 					</div>
 				</div> 
-				<li data-aos="fade-left" data-aos-duration="3000"><a href="#calendario">CALENDÁRIO</a></li>
-				<li data-aos="fade-left" data-aos-duration="3000"><a href="#identidade">CONTATO</a></li>
-				<button  id="menu__btn" data-aos="fade-left" data-aos-duration="3000">QUERO PARTICIPAR</button>	
+				<li data-aos="fade-left" data-aos-duration="3000"><a href="#calendario" onclick="toggleMenu()">CALENDÁRIO</a></li>
+				<li data-aos="fade-left" data-aos-duration="3000"><a href="#identidade" onclick="toggleMenu()">CONTATO</a></li>
+				<button  id="menu__btn" data-aos="fade-left" data-aos-duration="3000" onclick="toggleMenu()">QUERO PARTICIPAR</button>	
 			</ul>
 		</nav>
 

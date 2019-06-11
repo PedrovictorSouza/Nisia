@@ -6,19 +6,15 @@
     });
 });*/
 
-function menuClicked() {
-
-	var clicked = true;
-
-	if(clicked === true) {
-		$('.menu').css('display','flex');
-		clicked = false;		
-	} else {
-		$('.menu').css('display','none');
-		clicked = true;
+function toggleMenu() {
+	var menuBox = document.getElementById('menu-box');    
+	if(menuBox.style.display == "flex") { // if is menuBox displayed, hide it
+	  menuBox.style.display = "none";
 	}
-
-}
+	else { // if is menuBox hidden, display it
+	  menuBox.style.display = "flex";
+	}
+  }
 
 {
 	setTimeout(() => document.body.classList.add('render'), 60);
