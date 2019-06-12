@@ -7,14 +7,22 @@
 });*/
 
 function toggleMenu() {
-	var menuBox = document.getElementById('menu-box');    
-	if(menuBox.style.display == "flex") { // if is menuBox displayed, hide it
-	  menuBox.style.display = "none";
+	if(x.matches) {
+		var menuBox = document.getElementById('menu-box');    
+		if(menuBox.style.display == "flex") { // if is menuBox displayed, hide it
+		menuBox.style.display = "none";
+		}
+		else { // if is menuBox hidden, display it
+		menuBox.style.display = "flex";
+		}
 	}
-	else { // if is menuBox hidden, display it
-	  menuBox.style.display = "flex";
-	}
+
+	var x = window.matchMedia("(max-width: 700px)")
+	myFunction(x) // Call listener function at run time
+	x.addListener(myFunction) // Attach listener function on state changes
+	
   }
+  
 
 {
 	setTimeout(() => document.body.classList.add('render'), 60);
@@ -301,7 +309,6 @@ function toggleMenu() {
 		document.getElementById("#sistema__b").style.color = "red";
 	}
 
-	console.log(fixOffset());
 
 
 
