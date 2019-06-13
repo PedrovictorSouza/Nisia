@@ -217,10 +217,9 @@ function toggleMenu() {
 			}
 		} else {
 			for(var i = 0; i < change.length; i++) {
-				change[i].style.background = "url(./img/nisia_home_ana.png) no-repeat center";
+				change[i].style.background = "url(./img/nisia_home.png) no-repeat center";
 				change[i].style.backgroundSize = "cover";
 			}
-
 		}
 
 		}, 3000);
@@ -230,64 +229,19 @@ function toggleMenu() {
 	}
 
 
-	
 
-	/*$(window).scroll(function() {
-
-
-		$('#nav').css("background", "rgb(55, 1, 1)");
-		$('#nav').css("opacity", ".8");
-		$('#nav').css("transition", ".5");
-
-		clearTimeout($.data(this, 'scrollTimer'));
-	$.data(this, 'scrollTimer', setTimeout(function() {
-		$('#nav').css("background", "transparent");
-		$('#nav').css("opacity", "1");
-		$('#nav').css("transition", "1s");
-	}, 250));
-
-
-
-
-	});	
-
-
-	function navB() {
-		$('#nav').css("background", "rgb(55, 1, 1)");
-		$('#nav').css("opacity", ".8");
-		$('#nav').css("transition", ".5");
+	function history() {
+		var texto = document.getElementById('texto');
+		$('#texto').show('slow');
+		$('#yes').css('background-color', 'white');
+		$('#yes').css('color', 'red');
 	}
 
-	function navReverse() {
-		$('#nav').css("background", "transparent");
-		$('#nav').css("opacity", "1");
-		$('#nav').css("transition", "1s");
-	} 
-
-
-	window.addEventListener('scroll', () => {
-		if(window.scrollY > window.innerHeight && window.scrollY < window.innerHeight * 2) {
-			for(let i = 0; i < 5; i++) {
-				document.getElementsByTagName("li")[i].style.color = "red";
-			}
-			document.getElementById("menu__btn").style.color = "red";
-			document.getElementById("menu__btn").style.border = "1px solid red";
-			
-		} else if (window.scrollY < window.innerHeight) {
-			for(let i = 0; i < 5; i++) {
-				document.getElementsByTagName("li")[i].style.color = "white";
-			}
-			document.getElementById("menu__btn").style.color = "white";
-			document.getElementById("menu__btn").style.border = "1px solid white";
-
-		} else if (window.scrollY > window.innerHeight * 2) {
-			for(let i = 0; i < 5; i++) {
-				document.getElementsByTagName("li")[i].style.color = "white";
-			}
-			document.getElementById("menu__btn").style.color = "white";
-			document.getElementById("menu__btn").style.border = "1px solid white";	
-		}
-	}); */
+	function deactivateHistory() {
+		$('#texto').hide('slow');
+		$('#yes').css('background-color', 'transparent');
+		$('#yes').css('color', 'red');
+	}
 
 	function numeroA(min,max) {
 		var numero = Math.random() * (max - min) + min;
@@ -308,6 +262,10 @@ function toggleMenu() {
 	function start() {
 		document.getElementById("#sistema__b").style.color = "red";
 	}
+
+	
+
+	changePhoto();
 
 
 

@@ -43,7 +43,9 @@
 
 
 		<main id="home">
-			<a style="position: relative; bottom: 3vw;" onClick="homeAnimation()"><img id="home-btn" src="./img/arrow.svg" alt="" data-aos="zoom-out-up" data-aos-duration="1500"></a>	
+		<!--	<a style="position: relative; bottom: 3vw;" onClick="homeAnimation()"><img id="home-btn" src="./img/arrow.svg" alt="" data-aos="zoom-out-up" data-aos-duration="1500"></a> -->
+			<p id="patrocinio" style="color: white;">Um projeto em parceria com:</p>
+			<i id="logo-patrocinio" class="far fa-eye"></i>
 				<div class="content">
 					<div class="glitch">
 						<div class="glitch__img"></div>
@@ -314,7 +316,6 @@
 					<svg height="210" width="500">
   						<line x1="0" y1="0" x2="118" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
 					</svg>
-					<p class="calendario__box__a__p">2019</p>
 				</div>
 				<div class="calendario__box__b">
 					<div>
@@ -368,13 +369,14 @@
 
 					<div class="identidade__form__b__c">
 						<h2>QUER CONTAR A SUA HISTÓRIA?</h2>
-						<a><button>SIM</button></a>
-						<a><button>NÃO</button></a>
+						<a  onclick="history()"><button id="yes">SIM</button></a>
+						<a id="no" onclick="deactivateHistory()"><button>NÃO</button></a>
+						<textarea id="texto" placeholder="conte aqui sua historia." name="conte sua história" id="" cols="30" rows="10"></textarea>
 					</div>
 					
 					<div class="identidade__form__b__b">
 						<button>ENVIAR FORMULÁRIO</button>
-					</div>	
+					</div>
 				</div>
 			</section>
 			

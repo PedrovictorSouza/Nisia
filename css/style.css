@@ -82,6 +82,22 @@ footer p {
   padding-top: 1vh;
 }
 
+p#patrocinio {
+  position: absolute;
+  top: 70vh;
+  left: auto;
+  z-index: 1001;
+  font-weight: 300;
+  /* margin-top: 42vh; */
+}
+
+#logo-patrocinio {
+  position: absolute;
+  top: 77vh;
+  left: auto;
+  z-index: 1001;
+}
+
 .footer__a div {
   display: flex;
   align-items: center;
@@ -621,10 +637,9 @@ img.mulheres__a__svg {
 }
 
 .calendario__box__a {
-  max-width: 57vw;
   height: 10vh;
-  padding: 1em;
-  /* border-right: 2px solid white; */
+  padding-top: 3vh;
+  padding-left: 2vw;
   border-bottom: 2px solid white;
 }
 
@@ -836,6 +851,22 @@ section#ecos__do__sistema {
 section#ecos__do__sistema img {
   width: 20vw;
   height: 20vh;
+}
+
+
+textarea {
+  display: none;
+  width: 82.8vw;
+  height: 36vh;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 2vw;
+}
+
+::-webkit-input-placeholder ,::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder  { /* Chrome/Opera/Safari */
+  color: #bdbdbd;
+  opacity: .8;
 }
 
 
@@ -1828,7 +1859,12 @@ z-index: 999;
 margin-top: 2em;
 }
 
+
+
+
 @media screen and (max-width: 768px) {
+
+
 
   .menu {
     display: none;
@@ -1850,6 +1886,17 @@ margin-top: 2em;
 
 
   @media screen and (min-width: 768px) {
+
+
+    textarea {
+      width: 48.8vw;
+      height: 50vh;
+    }
+  
+
+    .calendario__box__b p {
+      margin-right: 5vw;
+    }
 
 
     .ecos__do__sistema__title {
@@ -2186,6 +2233,7 @@ main img:nth-child(1) {
 
   .calendario__box h2:nth-child(1) {
     margin-left: 1em;
+    margin-right: 6vw;
   }
 
   svg#calendario__info {
@@ -2233,6 +2281,8 @@ section#calendario {
     width: 60%;
     height: 100vh;
   }
+
+
 
 
   .ecos__do__sistema__title {
