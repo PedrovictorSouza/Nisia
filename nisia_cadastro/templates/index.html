@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
@@ -5,8 +7,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>NISIA</title>
 		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Anton|Jura|Niramit|Roboto:200,300,400,700" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -15,7 +17,7 @@
 			
 		<nav data-aos="fade-down">
 			<!-- AQUI FICA A LOGO (SVG) -->
-			<a class="logo-a" href="#home" data-aos="fade-left" data-aos-duration="1000"><img  id="logo logo-btn" src="./logo_mt.svg" alt=""></a>
+			<a class="logo-a" href="#home" data-aos="fade-left" data-aos-duration="1000"><img  id="logo logo-btn" src="{% static 'img/logo_mt.svg' %}" alt=""></a>
 			<a class="grid-one" onclick="toggleMenu()"></a>
 
 			</div>  
@@ -39,7 +41,7 @@
 			</ul>
 		</nav>
 
-		<img id="title_nisia" class="content__title" src="img/logonisia.svg">
+		<img id="title_nisia" class="content__title" src="{% static 'img/logonisia.svg' %}">
 
 
 		<main id="home">
@@ -59,7 +61,7 @@
 
 		<section id="project">
 
-			<img data-aos="fade-up" data-aos-duration="1000" src="img/video.png" alt="">
+			<img data-aos="fade-up" data-aos-duration="1000" src="{% static 'img/video.png' %}" alt="">
 
 			<div class="project__a">
 				<h1 data-aos="fade-up" data-aos-duration="1000">O PROJETO</h1>
@@ -73,42 +75,42 @@
 				<h1 class="mulheres__a__h1" data-aos="fade-up" data-aos-duration="1000">QUAIS PERSONAGENS FAZEM PARTE DA CADEIA DE PRODUÇÃO DE TECNOLOGIA?</h1>
 				<p class="mulheres__a__p" data-aos="fade-up" data-aos-duration="1500">Se quisermos que as mulheres realmente tenham voz ativa na tecnologia, é preciso que todos os elos da cadeia do desenvolvimento, operação e criação da tecnologia sejam ocupados. E cada elo depende intimamente de todos os outros.</p>
 				<div class="mulheres__a__symbols" data-aos="fade-up" data-aos-duration="1500">
-					<img class="mulheres__a__svg" src="img/symbols01.svg">
-					<img class="mulheres__a__svg" src="img/symbols02.svg">
-					<img class="mulheres__a__svg" src="img/symbols03.svg">
-					<img class="mulheres__a__svg" src="img/symbols04.svg">
-					<img class="mulheres__a__svg" src="img/symbols05.svg">
+					<img class="mulheres__a__svg" src="{% static 'img/symbols01.svg' %}">
+					<img class="mulheres__a__svg" src="{% static 'img/symbols02.svg' %}">
+					<img class="mulheres__a__svg" src="{% static 'img/symbols03.svg' %}">
+					<img class="mulheres__a__svg" src="{% static 'img/symbols04.svg' %}">
+					<img class="mulheres__a__svg" src="{% static 'img/symbols05.svg' %}">
 				</div>
 			</div>
 			<div class="mulheres__b">
-				<button id="mulheres__b__a" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="img/symbols06.svg"> A ESTUDANTE</button>
+				<button id="mulheres__b__a" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="{% static 'img/symbols06.svg' %}"> A ESTUDANTE</button>
 				<div class="panel">
-					<img src="./img/malala.png" alt="">	
+					<img src="{% static 'img/malala.png' %}" alt="">	
 					<p class="mulheres__b__p__b">Malala Yousafzai é uma ativista paquistanesa. Foi a pessoa mais nova a ser laureada com um prémio Nobel. 
 					É conhecida principalmente pela defesa dos direitos humanos das mulheres e do acesso à educação na sua região natal do vale do Swat na província de Khyber Pakhtunkhwa, no nordeste do Paquistão, onde os talibãs locais impedem as jovens de frequentar a escola. Desde então, o ativismo de Malala tornou-se um movimento internacional.</p>
 				</div>
 
-				<button id="mulheres__b__b" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="img/symbols07.svg"> A PROGRAMADORA</button>
+				<button id="mulheres__b__b" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="{% static 'img/symbols07.svg' %}"> A PROGRAMADORA</button>
 				<div class="panel">
-					<img src="./img/ada.png" alt="">	
+					<img src="{% static 'img/ada.png' %}" alt="">	
 					<p class="mulheres__b__p__b">Ada Augusta King, atualmente conhecida como Ada Lovelace, foi uma matemática e escritora inglesa. Hoje é reconhecida principalmente por ter escrito o primeiro algoritmo para ser processado por uma máquina, a máquina analítica de Charles Babbage. Por esse trabalho é considerada a primeira programadora de toda a história.</p>
 				</div>
 
-				<button id="mulheres__b__c" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="img/symbols08.svg"> A MENTORA</button>
+				<button id="mulheres__b__c" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="{% static 'img/symbols08.svg' %}"> A MENTORA</button>
 				<div class="panel">
-					<img src="./img/dorothy.png" alt="">	
+					<img src="{% static 'img/dorothy.png' %}" alt="">	
 					<p class="mulheres__b__p__b">Dorothy Johnson Vaughan foi uma matemática estadunidense, que trabalhou na National Advisory Committee for Aeronautics (NACA), a agência predecessora da NASA. Em 1949, ela foi a primeira mulher negra a ser promovida chefe de departamento na NACA.</p>
 				</div>
 
-				<button id="mulheres__b__d" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="img/symbols09.svg"> A EDUCADORA</button>
+				<button id="mulheres__b__d" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="{% static 'img/symbols09.svg' %}"> A EDUCADORA</button>
 				<div class="panel">
-					<img src="./img/nisia.png" alt="">	
+					<img src="{% static 'img/nisia.png' %}" alt="">	
 					<p class="mulheres__b__p__b">Nísia Floresta Brasileira Augusta foi uma educadora, escritora e poetisa brasileira. Primeira na educação feminista no Brasil, com protagonismo nas letras, no jornalismo e nos movimentos sociais.Defensora de ideais abolicionistas, republicanos e principalmente feministas, de consciência antecipadora para sua época, influenciou a prática educacional brasileira, rompendo limites do lugar social destinado à mulher.</p>
 					</div>
 
-				<button id="mulheres__b__e" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="img/symbols10.svg"> A EMPREGADORA</button>
+				<button id="mulheres__b__e" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="{% static 'img/symbols10.svg' %}"> A EMPREGADORA</button>
 				<div class="panel">
-					<img src="./img/susan.png" alt="">	
+					<img src="{% static 'img/susan.png' %}" alt="">	
 					<p class="mulheres__b__p__b">Susan Diane Wojcicki é uma executiva do ramo da tecnologia e atual diretora executiva do YouTube. Foi vice presidente sênior de propaganda e comércio no Google e conduziu projetos como o AdWords,  DoubleClick, Google Analytics e AdSense, que se tornou a segunda maior fonte de receita do Google. Tratou de duas das maiores aquisições da Google: a compra do YouTube por 1.65 bilhões de dólares em 2006 e a compra da DoubleClick por 3.1 bilhões de dólares em 2007</p>
 			
 				</div>
@@ -183,7 +185,7 @@
 				
 			</div>
 			<div id="sistema__b" data-aos="fade-up" data-aos-duration="2000">
-				<img class="infografico" src="img/info.svg">
+				<img class="infografico" src="{% static 'img/info.svg' %}">
 				<a href="#calendario"><button>VER CALENDÁRIO</button></a>
 			</div>
 		</section>	
@@ -381,7 +383,7 @@
 			</section>
 			
 			<footer>
-				<img src="./logo_mt.svg">
+				<img src="{% static 'img/logo_mt.svg' %}">
 				<p>SOMOS ESCOLA, MAS SOMOS OUTRAS COISAS TAMBÉM. <br>
 				SOMOS AQUELES QUE EMPODERAM, QUE EMANCIPAM, QUE LIBERTAM. <br>
 				SOMOS MOVIMENTO. <br>
@@ -416,9 +418,9 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>		
-		<script src="js/imagesloaded.pkgd.min.js"></script>
-		<script src="js/demob.js"></script>
-		<script src="js/accordion.js"></script>
-		<script src="js/animation.js"></script>
+		<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+		<script src="{% static 'js/demob.js' %}"></script>
+		<script src="{% static 'js/accordion.js' %}"></script>
+		<script src="{% static 'js/animation.js' %}"></script>
 	</body>
 </html>
