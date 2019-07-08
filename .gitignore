@@ -1,1 +1,33 @@
-*.DS_Store
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Distribution / packaging
+.Python
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# mypy
+.mypy_cache/
+
+#Ide
+.vscode
+.idea
+
+node_modules
+
+#GulpFiles
+styles*
+js*
+
+
+Pipfile
