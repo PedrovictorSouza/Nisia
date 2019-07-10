@@ -1,16 +1,10 @@
 from django.db import models
+from .choices import CHOICES_ROLE
 
 class Registered(models.Model):
     class Meta:
         verbose_name_plural = 'Registrados'
 
-    CHOICES_ROLE = [
-        ('A ESTUDANTE', 'A ESTUDANTE'),
-        ('A EDUCADORA', 'A EDUCADORA'),
-        ('A EMPREGADORA', 'A EMPREGADORA'),
-        ('A MENTORA', 'A MENTORA'),
-        ('A PROFISSIONAL', 'A PROFISSIONAL')
-    ]
     name = models.CharField(max_length=120, verbose_name='Nome')
     email = models.CharField(max_length=120, verbose_name='Email')
     role = models.CharField(
