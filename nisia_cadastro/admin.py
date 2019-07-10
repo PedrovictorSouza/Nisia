@@ -1,4 +1,7 @@
 from django.contrib import admin
 from .models import Registered
 
-admin.site.register(Registered)
+class RegisteredAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'role')
+
+admin.site.register(Registered, RegisteredAdmin)
