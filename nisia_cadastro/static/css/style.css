@@ -160,12 +160,12 @@ h2 {
   letter-spacing: 1px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"] {
   background: transparent;
   border: none;
   border-bottom: 2px solid white;
   padding-bottom: 2em;
-  width: 26vw;
+  width: 100%;
   margin-bottom: 2em;
   color: white;
   margin-right: 2.5em;
@@ -1701,10 +1701,6 @@ button.ecos-btn {
 
 h1 {
 margin-top: 0px;
-}
-
-input[type="text"] {
-width: 100%;
 }
 
 main {
