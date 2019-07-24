@@ -354,7 +354,7 @@
 					</div>		
 				</div>
 				<div class="identidade__form__b" data-aos="fade-up" data-aos-duration="2000">
-                    <form method="POST" action="/submit" id="registrar" style="width: 100%">
+                    <form id="registrar" style="width: 100%">
                         {% csrf_token %}
                         <div class="identidade__input" style="width: 100%">
                             {{ form.name }}
@@ -377,12 +377,12 @@
                         </div>
 
                         <div class="identidade__form__b__b" style="width: 100%">
-                            <button>ENVIAR FORMULÁRIO</button>
+                            <button type="button" onclick="grabFormData()">ENVIAR FORMULÁRIO</button>
                         </div>
                     </form>
 				</div>
 			</section>
-			
+
 			<footer>
 				<img src="{% static 'img/logo_mt.svg' %}">
 				<p>SOMOS ESCOLA, MAS SOMOS OUTRAS COISAS TAMBÉM. <br>

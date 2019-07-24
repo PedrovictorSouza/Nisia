@@ -23,11 +23,4 @@ ENV/
 .vscode
 .idea
 
-node_modules
-
-#GulpFiles
-styles*
-js*
-
-
 Pipfile
