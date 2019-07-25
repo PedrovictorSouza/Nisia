@@ -6,9 +6,15 @@
     });
 });*/
 
+let form = document.querySelector('form');
+form.onsubmit = e => {
+    e.preventDefault();
+    grabFormData();
+};
+
 function getCookie(name) {
     let cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
+    if (document.cookie) {
         let cookies = document.cookie.split(';');
         for (let i = 0; i < cookies.length; i++) {
             let cookie = cookies[i].trim();
@@ -27,12 +33,12 @@ function grabFormData(){
     let regRole = document.querySelector('select[name="role"]').value;
     let regStory = document.querySelector('textarea[name="story"]').value;
     let data = {
-        "name": regName,
-        "email": regEmail,
-        "role": regRole,
-        "story": regStory
+      "name": regName,
+      "email": regEmail,
+      "role": regRole,
+      "story": regStory
     };
-    submitForm(data);
+    return submitForm(data);
 }
 
 function submitForm(data){
@@ -44,11 +50,16 @@ function submitForm(data){
         body: JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
     }).then(function(response) {
-        if (!response.ok) {
-            throw new Error('HTTP error, status = ' + response.status);
+        return response.json();
+    }).then(function(data) {
+        if (data.status == 200) {
+          alert(data.result);
         }
-        return response;
-    })
+        else {
+            alert("Error: " + data.result);
+            return data;
+        }
+    });
 };
 
 function toggleMenu() {

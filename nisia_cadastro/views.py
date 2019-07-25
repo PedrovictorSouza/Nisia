@@ -18,12 +18,17 @@ def form(request):
             registered_person.email = register_form.cleaned_data['email']
             registered_person.role = register_form.cleaned_data['role']
             registered_person.story = register_form.cleaned_data['story']
-            registered_person.save()
-            msg = {"result": "Usuário Registrado"}
-            return HttpResponse(msg, status=200)
+            try:
+                person_db = Registered.objects.get(email=register_form.cleaned_data['email'])
+                msg = {"status": 400, "result": "user is already registered"}
+                return HttpResponse(json.dumps(msg), status=400)
+            except:
+                registered_person.save()
+                msg = {"status": 200, "result": "user successfully registered"}
+                return HttpResponse(json.dumps(msg), status=200)
         else:
-            msg = {"result": "Dados inválidos"}
-            return HttpResponse(msg, status=400)
+            msg = {"status": 400, "result": "invalid data"}
+            return HttpResponse(json.dumps(msg), status=400)
     else:
-        msg = {"result": "Método inválido"}
-        return HttpResponse(msg, status=500)
+        msg = {"status": 405, "result": "invalid method"}
+        return HttpResponse(json.dumps(msg), status=500)
