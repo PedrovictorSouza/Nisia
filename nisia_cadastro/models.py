@@ -14,3 +14,4 @@ class Registered(models.Model):
         default='A ESTUDANTE'
     )
     story = models.TextField(blank=True, null=True)
+    registered_at = models.DateTimeField(auto_now_add=True, verbose_name='Cadastro efetuado')
