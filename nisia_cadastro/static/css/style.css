@@ -482,6 +482,25 @@ img.mulheres__a__svg {
   width: fit-content;
 }
 
+#modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 79%;
+  height: 23%;
+  background: #db4340;
+  border: 1px solid white;
+  position: absolute;
+  top: 55%;
+  left: 10%;
+}
+
+#modal button {
+  margin-left: 2vw;
+  
+}
+
 #mulheres__b__a, #mulheres__b__b, #mulheres__b__c, #mulheres__b__d, #mulheres__b__e {
   background-repeat: no-repeat;
 }
@@ -884,6 +903,7 @@ section#ecos__do__sistema p {
 
 
 section#identidade {
+  position: relative;
   background: url('../img/profilebg.svg');
   background-size: cover;
   background-position: center;
@@ -2396,6 +2416,14 @@ h1 {
 .ecos__do__sistema__title.main__text {
   display: flex;
   align-items: center;
+}
+
+
+#modal {
+  width: 33%;
+  height: 23%;
+  top: 48%;
+  left: 35%;
 }
 
 }

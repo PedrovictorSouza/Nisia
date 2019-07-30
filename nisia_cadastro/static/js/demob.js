@@ -6,6 +6,8 @@
     });
 });*/
 
+const modal = document.getElementById("modal")
+
 let form = document.querySelector('form');
 form.onsubmit = e => {
     e.preventDefault();
@@ -62,14 +64,23 @@ function submitForm(data){
     });
 };
 
+
+function activateModal() {
+	modal.style.display = "flex"
+}
+
+function closeModal() {
+	modal.style.display = "none"
+}
+
 function toggleMenu() {
 	if(x.matches) {
-		var menuBox = document.getElementById('menu-box');    
+		var menuBox = document.getElementById('menu-box')  
 		if(menuBox.style.display == "flex") { // if is menuBox displayed, hide it
-		menuBox.style.display = "none";
+		menuBox.style.display = "none"
 		}
 		else { // if is menuBox hidden, display it
-		menuBox.style.display = "flex";
+		menuBox.style.display = "flex"
 		}
 	}
 

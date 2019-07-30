@@ -377,11 +377,18 @@
                         </div>
 
                         <div class="identidade__form__b__b" style="width: 100%">
-                            <button>ENVIAR FORMULÁRIO</button>
+                            <button onClick="activateModal()">ENVIAR FORMULÁRIO</button>
                         </div>
                     </form>
 				</div>
+
+				<div id="modal">
+					<h2>Desculpe, nao rolou.</h2>
+					<button onClick="closeModal()">FECHAR</button>
+				</div>
 			</section>
+			
+		
 
 			<footer>
 				<img src="{% static 'img/logo_mt.svg' %}">
