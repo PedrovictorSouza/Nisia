@@ -20,15 +20,15 @@ def form(request):
             registered_person.story = register_form.cleaned_data['story']
             try:
                 person_db = Registered.objects.get(email=register_form.cleaned_data['email'])
-                msg = {"status": 400, "result": "user is already registered"}
+                msg = {"status": 400, "result": "Você já está cadastrada"}
                 return HttpResponse(json.dumps(msg), status=400)
             except:
                 registered_person.save()
-                msg = {"status": 200, "result": "user successfully registered"}
+                msg = {"status": 200, "result": "Cadastrada com sucesso!"}
                 return HttpResponse(json.dumps(msg), status=200)
         else:
-            msg = {"status": 400, "result": "invalid data"}
+            msg = {"status": 400, "result": "Dados inválidos"}
             return HttpResponse(json.dumps(msg), status=400)
     else:
-        msg = {"status": 405, "result": "invalid method"}
+        msg = {"status": 405, "result": "Erro inesperado, entre em contato conosco"}
         return HttpResponse(json.dumps(msg), status=500)
