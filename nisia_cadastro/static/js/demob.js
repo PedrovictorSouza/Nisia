@@ -279,12 +279,12 @@ function toggleMenu() {
 	
 	 	if(imageA() === 'ana') {
 			for(var i = 0; i < change.length; i++) {
-				change[i].style.background = "url(../static/img/nisia_home_ana.png) no-repeat center";
+				change[i].style.background = "url(/static/img/nisia_home_ana.png) no-repeat center";
 				change[i].style.backgroundSize = "cover";
 			}
 		} else {
 			for(var i = 0; i < change.length; i++) {
-				change[i].style.background = "url(../static/img/nisia_home.png) no-repeat center";
+				change[i].style.background = "url(/static/img/nisia_home.png) no-repeat center";
 				change[i].style.backgroundSize = "cover";
 			}
 		}
