@@ -260,7 +260,7 @@ section#project {
   padding-bottom: 10vw;
   justify-content: center;
   align-items: center;
-  background-image: url('../static/img/random_bg-01.svg');
+  background-image: url('/static/img/random_bg-01.svg');
   background-size: cover;
 }
 
@@ -477,9 +477,26 @@ img.mulheres__a__svg {
   margin-bottom: .5vh;
 }
 
-
 .ecos__media__a {
   width: fit-content;
+}
+
+#modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 79%;
+  height: 23%;
+  background: #db4340;
+  border: 1px solid white;
+  position: absolute;
+  top: 55%;
+  left: 10%;
+}
+
+#modal button {
+  margin-left: 2vw;
 }
 
 #mulheres__b__a, #mulheres__b__b, #mulheres__b__c, #mulheres__b__d, #mulheres__b__e {
@@ -534,7 +551,6 @@ img.mulheres__a__svg {
 .panel img {
   width: 30vw;
 }
-
 
 .calendario__box h1 {
   text-align: center;
@@ -651,7 +667,6 @@ p.calendario__box__a__p {
   display: none;
 }
 
-
 .calendario__box div:nth-child(2) {
   min-width: 30vw;
   display: flex;
@@ -665,13 +680,10 @@ p.calendario__box__a__p {
   flex-direction: column;
 }
 
-
-
 .ecossistema__perfis {
   position: relative;
   border: none !important;
 }
-
 
 .ecossistema__a {
   width: 100vmax;
@@ -686,7 +698,6 @@ p.calendario__box__a__p {
   padding-left: 8vw;
 }
 
-
 .ecossistema__content__b h1 {
   font-size: 19pt;
   color: #db4442;
@@ -694,9 +705,6 @@ p.calendario__box__a__p {
   width: 80vw;
   margin-top: 8vw;
 }
-
-
-
 
 .identidade__form__a {
   max-width: 60vw;
@@ -706,7 +714,6 @@ p.calendario__box__a__p {
   margin-bottom: 4em;
   margin-top: 8vh;
 }
-
 
 .ecossistema__content__a {
   margin-top: 4vh;
@@ -751,8 +758,6 @@ p.calendario__box__a__p {
   width: 12vw;
 }
 
-
-
 .popup {
   position: absolute;
   top: auto;
@@ -782,8 +787,6 @@ p.calendario__box__a__p {
   font-size: 2em;
   color: #582828;
 }
-
-
 
 .ecossistema__perfis_h2 {
     font-size: 1em;
@@ -853,7 +856,6 @@ section#ecos__do__sistema img {
   height: 20vh;
 }
 
-
 textarea {
   display: none;
   width: 82.8vw;
@@ -869,7 +871,6 @@ textarea {
   opacity: .8;
 }
 
-
 section#ecos__do__sistema p {
   max-width: 75vw;
   font-size: 14px;
@@ -881,9 +882,8 @@ section#ecos__do__sistema p {
   
 }
 
-
-
 section#identidade {
+  position: relative;
   background: url('../img/profilebg.svg');
   background-size: cover;
   background-position: center;
@@ -893,18 +893,15 @@ section#identidade {
   background-color: #731413;
 }
 
-
 .identidade__form {
   padding: 2em;
   padding-bottom: 0px;
   width: 100%;
 }
 
-
 .identidade__fotos {
   width: 35vw;
 }
-
 
 .agenda__contato {
   background: black;
@@ -919,20 +916,16 @@ section#identidade {
   max-width: 300px;
 }
 
-
 .profiles {
   max-width: 25vw;
   max-height: 60vh;
   margin: 2em;
 }
 
-
-
 .infografico {
   width: 98vw;
   height: 50vh;
 }
-
 
 ul li {
   list-style-type: none;
@@ -955,7 +948,6 @@ li:hover {
 .split {
   color: #db4442;
 }
-
 
 .demo-1 {
   --color-text: #fff;
@@ -989,7 +981,6 @@ li:hover {
   animation-iteration-count: infinite;
 }
 
-
 #title_nisia {
   z-index: 100;
   position: absolute;
@@ -997,8 +988,6 @@ li:hover {
   left: 10vw;
   width: 80vw;
 }
-
-
 
 .eco {
   display: flex;
@@ -1013,15 +1002,9 @@ li:hover {
   margin-left: 2em;
 }
 
-
 .ecos__media p {
   margin-top: 0px;
 }
-
-
-
-
-
 
 .content__title {
   position: relative;
@@ -1056,7 +1039,6 @@ li:hover {
   padding: 0 1em;
   text-align: center;
 }
-
 
 .identidade__form__b__a, .identidade__form__b__b{
  border: none;
@@ -1175,7 +1157,6 @@ svg#calendario__info {
   width: 100%;
 }
 
-
 .ecossistema__title, .identity {
   margin-top: 2em;
 }
@@ -1183,10 +1164,6 @@ svg#calendario__info {
 .identity {
   display: none;
 }
-
-
-
-
 
 /* Glitch styles */
 .glitch {
@@ -1199,20 +1176,18 @@ svg#calendario__info {
   overflow: hidden;
 }
 
-
 .glitch__img {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 105vw;
   height: 105vh;
-  background: url('../static/img/nisia_home.png') no-repeat 50% 0;
+  background: url('/static/img/nisia_home.png') no-repeat 50% 0;
   background-color: var(--blend-color-1);
   background-size: cover;
   transform: translate3d(0, 0, 0);
   background-blend-mode: var(--blend-mode-1);
   max-width: 100vw;
-  
 }
 
 .glitch__img:nth-child(n+2) {
@@ -1525,7 +1500,6 @@ svg#calendario__info {
   position: relative;
 }
 
-
 .slider {
   }
   .slider .scrollable {
@@ -1552,23 +1526,16 @@ svg#calendario__info {
 	top: 0;
   }
 
-
-
-/*# sourceMappingURL=style.css.map */
-
-
 .scrollable-container div {
   width: 100vw;
   margin-left: 100px;
   margin-left: 20px;
 }
 
-
 [logo-anime] {
   fill: white;
   transition: .3s;
 }
-
 
 .losango {
   fill: white;
@@ -1585,7 +1552,6 @@ svg#Capa_1 {
   left: 35vw;
   cursor: pointer;
 }
-
 
 .st0{stroke:#cc9292;}
 .st1{fill: #db4442; font-size: 20pt;}
@@ -1617,77 +1583,70 @@ text:hover {
 .project-b {
   background: blue;
 }
-
-  /* Grid One */
   
-  .grid-one {
-    height: 25px;
-    width: 25px;
-    margin: 0px;
-    z-index: 100;
-    background-image: url('../img/sanduba.svg');
-    margin-right: 2vw;
-  }
-
-  
-  #grid-one:hover span {
-    box-shadow: -8px -8px 0 white, -8px 0 0 white, -8px 8px 0 white, 0 -8px 0 white, 0 8px 0 white, 8px -8px 0 white, 8px 0 0 white, 8px 8px 0 white;
-  }
-  
-  #grid-one span:before {
-    content:'';
-    display:block;
-    position:absolute;
-    top:0;
-    left:0;
-    height:100%;
-    width:100%;
-    background:white;
-  }
-  
-  #grid-one.active span {
-    box-shadow: 0 0 0 white;
-    width: 80%;
-    height: 4px;
-    left: 0%;
-    margin: -4px 0 0 0px;
-    transform: rotate(45deg);
-    background: #f91120;
-  }
-  
-  #grid-one.active span:before {
-    transform:rotate(90deg);
-    background:#a30510;
-  }
-
-
-
-
-  text.st0.st1.st2.st3 {
-    font-size: 1.1em;
-    /* padding: 1em; */
-    /* margin-right: 3em; */
+.grid-one {
+  height: 25px;
+  width: 25px;
+  margin: 0px;
+  z-index: 100;
+  background-image: url('../img/sanduba.svg');
+  margin-right: 2vw;
 }
 
-  .calendario__box__a  h1{
-    text-align: left;
-    padding-top: .5vh;
-    font-size: 2em;
-  }
+#grid-one:hover span {
+  box-shadow: -8px -8px 0 white, -8px 0 0 white, -8px 8px 0 white, 0 -8px 0 white, 0 8px 0 white, 8px -8px 0 white, 8px 0 0 white, 8px 8px 0 white;
+}
 
-  .identity {
-    color: blue;
-  }
+#grid-one span:before {
+  content:'';
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background:white;
+}
+
+#grid-one.active span {
+  box-shadow: 0 0 0 white;
+  width: 80%;
+  height: 4px;
+  left: 0%;
+  margin: -4px 0 0 0px;
+  transform: rotate(45deg);
+  background: #f91120;
+}
+
+#grid-one.active span:before {
+  transform:rotate(90deg);
+  background:#a30510;
+}
+
+text.st0.st1.st2.st3 {
+  font-size: 1.1em;
+  /* padding: 1em; */
+  /* margin-right: 3em; */
+}
+
+.calendario__box__a  h1{
+  text-align: left;
+  padding-top: .5vh;
+  font-size: 2em;
+}
+
+.identity {
+  color: blue;
+}
 
 .calendario__sistema {
-    margin-top: 15vh;
-    margin-bottom: 2em;
+  margin-top: 15vh;
+  margin-bottom: 2em;
 }
 
 .ecos__media {
   justify-content: center;
 }
-
 
 button.ecos-btn {
   margin: 0px;
@@ -1707,12 +1666,9 @@ main {
   overflow-y: hidden;
 }
 
-
 p {
   max-width: 73vw;
 }
-
-
 
 .ecossistema__perfis {
   padding-right: 2em;
@@ -1728,8 +1684,6 @@ p {
 
   width: 100%;
 }
-
-
 
 section#sistema div:nth-child(2) {
   background-image: url(../img/sistema_bg.png);
@@ -1747,7 +1701,6 @@ section#ecos__do__sistema {
   height: 100vh;
 }
 
-
 section#ecos__do__sistema h1 {
   font-size: 2.5em;
 }
@@ -1760,7 +1713,6 @@ section#ecos__do__sistema h2 {
 .identidade__form h1 {
   font-size: 2em;
 }
-
 
 .content__title {
   top: 3vh;
@@ -1781,14 +1733,12 @@ section#ecos__do__sistema h2 {
   margin: 0px;
 }
 
-
-
 .ecos__media div:nth-child(3) {
-margin-bottom: 7em;
+  margin-bottom: 7em;
 }
 
 .ecos__do__sistema__main_text {
-margin-top: 3vh;
+  margin-top: 3vh;
 }
 
 .ecos__do__sistema__title {
@@ -1797,71 +1747,60 @@ margin-top: 3vh;
   margin-top: 12vh;
 }
 
-
-
 .ecossistema__a p {
-margin: 0px;
+  margin: 0px;
 }
 
 .ecossistema__content__a, {
-border-left: 2px solid #db4442;
-height: 20vh;
-height: fit-content;
-padding-left: 1em;
+  border-left: 2px solid #db4442;
+  height: 20vh;
+  height: fit-content;
+  padding-left: 1em;
 }
-
-
 
 .ecossistema__b {
-width: 100vw;
-height: fit-content;
-display: flex;
-flex-wrap: wrap;
-justify-content: flex-start;
-align-items: center;
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-
 .losango {
-width: 80vw;
+  width: 80vw;
 }
 
 #logo {
-max-width: 11vw;
-height: 35px;
-margin-top: 0px;
-margin-left: 0px;
+  max-width: 11vw;
+  height: 35px;
+  margin-top: 0px;
+  margin-left: 0px;
 }
 
 .project-b img {
-position: absolute;
-top: 3vh;
-left: 0vw;
-z-index: 888;
-width: 100vw;
+  position: absolute;
+  top: 3vh;
+  left: 0vw;
+  z-index: 888;
+  width: 100vw;
 }
 
 .project-b div {
-z-index: 1001;
-margin-top: 25vh;
+  z-index: 1001;
+  margin-top: 25vh;
 }
 
 .project-b button:nth-child(1) {
-position: absolute;
-top: -3vh;
-left: 0vw;
-width: 31vw;
-z-index: 999;
-margin-top: 2em;
+  position: absolute;
+  top: -3vh;
+  left: 0vw;
+  width: 31vw;
+  z-index: 999;
+  margin-top: 2em;
 }
 
-
-
-
 @media screen and (max-width: 768px) {
-
-
-
   .menu {
     display: none;
     background: #db423f;
@@ -1874,26 +1813,16 @@ margin-top: 2em;
     margin-top: 0px;
     transition: .5s;
   }
-  
-
 }
-
-
-
-
   @media screen and (min-width: 768px) {
-
-
     textarea {
       width: 48.8vw;
       height: 50vh;
     }
   
-
     .calendario__box__b p {
       margin-right: 5vw;
     }
-
 
     .ecos__do__sistema__title {
       width: 20vw;
@@ -1903,13 +1832,10 @@ margin-top: 2em;
       width: 2.7vw;
     }
 
-
-
     .infografico {
       width: 52vw;
       height: 75vh;
   }
-
 
     .dropdown button {
       display: flex;
@@ -1923,7 +1849,6 @@ margin-top: 2em;
     footer {
       justify-content: start;
     }
-
 
     .footer__a {
       align-items: flex-start;
@@ -1958,8 +1883,6 @@ margin-top: 2em;
       width: 19vw;
       margin-right: 4vw;
     }
-
-
 
     .img.mulheres__a__svg {
       width: 3vw;
@@ -2078,7 +2001,6 @@ margin-top: 2em;
       max-width: 40vw;
     }
 
-    
     .logo-a {
       width: 0px;
     }
@@ -2088,7 +2010,6 @@ margin-top: 2em;
       left: 26vw;
       width: 50vw;
     }
-    
 
    .ecossistema__a {
     width: 31vw;
@@ -2108,7 +2029,6 @@ margin-top: 2em;
       margin-left: 2vw;
       height: 100vh;
     }
-
  
   .ecossistema__content__b {
     width: 41vw;
@@ -2170,7 +2090,6 @@ margin-top: 2em;
   font-size: 10pt;
 }
 
-
 .accordion {
   background-size: 60%;
   background-position-y: -18vh;
@@ -2187,8 +2106,6 @@ margin-top: 2em;
   font-size: 14pt;
   margin-top: 5px;
 }
-
-
 
 button.ecos-btn {
   font-size: .6em;
@@ -2210,7 +2127,6 @@ img#perfil {
   margin-top: 0px;
 }
 
-
 .ecossistema__content__a {
   max-width: 22vw;
   border-left: 2px solid #db4442;
@@ -2220,8 +2136,6 @@ img#perfil {
 main img:nth-child(1) {
   width: 4vw;
 }
-
- 
 
   section#sistema div {
     width: 40%;
@@ -2235,7 +2149,6 @@ main img:nth-child(1) {
   svg#calendario__info {
     margin: 0px;
   }
-
 
   .calendario__sistema {
     max-width: 28vw;
@@ -2277,9 +2190,6 @@ section#calendario {
     width: 60%;
     height: 100vh;
   }
-
-
-
 
   .ecos__do__sistema__title {
     max-width: 26vw;
@@ -2398,8 +2308,12 @@ h1 {
   align-items: center;
 }
 
+#modal {
+  width: 33%;
+  height: 23%;
+  top: 48%;
+  left: 35%;
 }
-
 
   @media screen and (min-width: 1366px) {
 

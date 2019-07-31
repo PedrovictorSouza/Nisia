@@ -6,6 +6,9 @@
     });
 });*/
 
+const modal = document.querySelector('#modal');
+const modal_text = document.querySelector('#modal h2');
+
 let form = document.querySelector('form');
 form.onsubmit = e => {
     e.preventDefault();
@@ -53,23 +56,31 @@ function submitForm(data){
         return response.json();
     }).then(function(data) {
         if (data.status == 200) {
-          alert(data.result);
+          activateModal(data.result);
         }
         else {
-            alert("Error: " + data.result);
-            return data;
+            activateModal(data.result);
         }
     });
 };
 
+function activateModal(text) {
+    modal_text.innerHTML = text;
+	modal.style.display = "flex";
+}
+
+function closeModal() {
+	modal.style.display = "none";
+}
+
 function toggleMenu() {
 	if(x.matches) {
-		var menuBox = document.getElementById('menu-box');    
+		var menuBox = document.getElementById('menu-box')  
 		if(menuBox.style.display == "flex") { // if is menuBox displayed, hide it
-		menuBox.style.display = "none";
+		menuBox.style.display = "none"
 		}
 		else { // if is menuBox hidden, display it
-		menuBox.style.display = "flex";
+		menuBox.style.display = "flex"
 		}
 	}
 
@@ -268,12 +279,12 @@ function toggleMenu() {
 	
 	 	if(imageA() === 'ana') {
 			for(var i = 0; i < change.length; i++) {
-				change[i].style.background = "url(../static/img/nisia_home_ana.png) no-repeat center";
+				change[i].style.background = "url(/static/img/nisia_home_ana.png) no-repeat center";
 				change[i].style.backgroundSize = "cover";
 			}
 		} else {
 			for(var i = 0; i < change.length; i++) {
-				change[i].style.background = "url(../static/img/nisia_home.png) no-repeat center";
+				change[i].style.background = "url(/static/img/nisia_home.png) no-repeat center";
 				change[i].style.backgroundSize = "cover";
 			}
 		}
