@@ -6,7 +6,8 @@
     });
 });*/
 
-const modal = document.getElementById("modal")
+const modal = document.querySelector('#modal');
+const modal_text = document.querySelector('#modal h2');
 
 let form = document.querySelector('form');
 form.onsubmit = e => {
@@ -55,22 +56,21 @@ function submitForm(data){
         return response.json();
     }).then(function(data) {
         if (data.status == 200) {
-          alert(data.result);
+          activateModal(data.result);
         }
         else {
-            alert("Error: " + data.result);
-            return data;
+            activateModal(data.result);
         }
     });
 };
 
-
-function activateModal() {
-	modal.style.display = "flex"
+function activateModal(text) {
+    modal_text.innerHTML = text;
+	modal.style.display = "flex";
 }
 
 function closeModal() {
-	modal.style.display = "none"
+	modal.style.display = "none";
 }
 
 function toggleMenu() {
