@@ -354,18 +354,18 @@
 					</div>		
 				</div>
 				<div class="identidade__form__b" data-aos="fade-up" data-aos-duration="2000">
-                    <form id="registrar" action="/form" style="width: 100%">
+                    <form id="registrar" action="/form">
                         {% csrf_token %}
-                        <div class="identidade__input" style="width: 100%">
+                        <div class="identidade__input">
                             {{ form.name }}
                             {{ form.email }}
                         </div>
-                        <div class="identidade__form__b__a" style="width: 100%">
+                        <div class="identidade__form__b__a">
                             <h2> {{ form.role.label }} </h2>
                             {{ form.role }}
                         </div>
 
-                        <div class="identidade__form__b__c" style="width: 100%">
+                        <div class="identidade__form__b__c">
                             <h2>QUER CONTAR A SUA HISTÓRIA?</h2>
                             <a onclick="history()">
                                 <button type="button" id="yes">SIM</button>

@@ -14,6 +14,7 @@ a {
     transition: .5s;
     text-align: left;
     color: white;
+    font-size: 10pt;
 }
 
 
@@ -41,6 +42,8 @@ button:hover {
 
 button.dropbtn.aos-init.aos-animate {
   border: none;
+  font-size: 10pt;
+  width: fit-content;
 }
 
 fa, .fas {
@@ -86,7 +89,7 @@ p#patrocinio {
   position: absolute;
   top: 70vh;
   left: auto;
-  z-index: 1001;
+  z-index: 1000;
   font-weight: 300;
   /* margin-top: 42vh; */
 }
@@ -95,7 +98,7 @@ p#patrocinio {
   position: absolute;
   top: 77vh;
   left: auto;
-  z-index: 1001;
+  z-index: 1000;
 }
 
 .footer__a div {
@@ -121,7 +124,7 @@ i {
 }
 
 footer p {
-  font-size: 6pt;
+  font-size: 10pt;
   margin-left: 10px;
   margin-top: 0px;
 }
@@ -165,7 +168,7 @@ input[type="text"], input[type="email"] {
   border: none;
   border-bottom: 2px solid white;
   padding-bottom: 2em;
-  width: 100%;
+  width: 50%;
   margin-bottom: 2em;
   color: white;
   margin-right: 2.5em;
@@ -713,7 +716,6 @@ p.calendario__box__a__p {
   border-left: 3px solid white;
   padding-left: 2em;
   height: auto;
-  margin-bottom: 4em;
   margin-top: 8vh;
 }
 
@@ -875,7 +877,7 @@ textarea {
 
 section#ecos__do__sistema p {
   max-width: 75vw;
-  font-size: 14px;
+  font-size: 12pt;
   margin-right: 6vw;
 }
 
@@ -896,7 +898,7 @@ section#identidade {
 }
 
 .identidade__form {
-  padding: 2em;
+  padding: 1em;
   padding-bottom: 0px;
   width: 100%;
 }
@@ -1660,6 +1662,10 @@ button.ecos-btn {
   margin-top: 4vh;
 }
 
+button.ecos-btn:hover {
+  color: #db4442;
+}
+
 h1 {
 margin-top: 0px;
 }
@@ -1805,15 +1811,21 @@ section#ecos__do__sistema h2 {
 @media screen and (max-width: 768px) {
   .menu {
     display: none;
-    background: #db423f;
+    background: #5d1a19d4;
     height: 100vh;
-    width: 69vw;
+    width: 100%;
     position: absolute;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     top: 0;
     right: 0;
     margin-top: 0px;
     transition: .5s;
+  }
+
+  input[type="text"], input[type="email"] {
+    width: 100%;
   }
 }
   @media screen and (min-width: 768px) {
@@ -1831,7 +1843,7 @@ section#ecos__do__sistema h2 {
 
     .ecos__do__sistema__title {
       width: 20vw;
-      margin-top: 14vh;
+      margin-top: 3vh;
     }
     nav img {
       width: 2.7vw;
@@ -1841,6 +1853,10 @@ section#ecos__do__sistema h2 {
       width: 52vw;
       height: 75vh;
   }
+
+  .identidade__form {
+    padding: 3em;
+}
 
     .dropdown button {
       display: flex;
@@ -2258,10 +2274,6 @@ img.mulheres__a__svg {
   width: 3vw;
 }
 
-.identidade__form {
-  width: 63%;
-}
-
 .identidade__fotos {
   width: 26vw;
   margin-top: 7vh;
@@ -2285,10 +2297,6 @@ input.aos-init.aos-animate{
 
 .identidade__form__b__c {
   justify-content: flex-start;
-}
-
-.identidade__form__b__c h2 {
-  width: 58vw;
 }
 
 select {
