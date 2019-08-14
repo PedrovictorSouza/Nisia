@@ -73,8 +73,10 @@ function closeModal() {
 	modal.style.display = "none";
 }
 
-function toggleMenu() {
-	if(x.matches) {
+
+
+  function toggleMenu() {
+
 		var menuBox = document.getElementById('menu-box')  
 		if(menuBox.style.display == "flex") { // if is menuBox displayed, hide it
 		menuBox.style.display = "none"
@@ -82,12 +84,6 @@ function toggleMenu() {
 		else { // if is menuBox hidden, display it
 		menuBox.style.display = "flex"
 		}
-	}
-
-	var x = window.matchMedia("(max-width: 700px)")
-	myFunction(x) // Call listener function at run time
-	x.addListener(myFunction) // Attach listener function on state changes
-	
   }
   
 

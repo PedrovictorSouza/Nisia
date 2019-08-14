@@ -22,7 +22,7 @@ button {
   border: 1px solid #eee;
   color: #eee;
   letter-spacing: 3px;
-  font-size: 6pt;
+  font-size: 9pt;
   width: 25em;
   height: 5em;
 }
@@ -232,10 +232,13 @@ section {
 svg {
   fill: white;
   margin: 12px;
-  width: 73vw;
+  width: 88vw;
   margin-top: 5vw;
-  margin-left: 11vw;
+  margin-left: 5vw;
 }
+
+
+
 
 #menu__btn:hover {
   color: #db4442;
@@ -245,7 +248,7 @@ svg {
 
 p {
   color: white;
-  font-size: 10pt;
+  font-size: 12pt;
   font-family: 'Niramit', sans-serif;
   font-weight: 400;
 }
@@ -608,7 +611,7 @@ img.mulheres__a__svg {
 }
 
 .main__text span {
-  font-size: 10pt;
+  font-size: 12pt;
 }
 
 .calendario__box {
@@ -623,7 +626,7 @@ img.mulheres__a__svg {
 
 .project-b__p {
   margin-left: 0;
-  font-size: 10pt;
+  font-size: 12pt;
   margin-bottom: 5vw;
   color: #757575;
 }
@@ -689,7 +692,6 @@ p.calendario__box__a__p {
   width: 100vmax;
   height: fit-content;
   padding-bottom: 5vh;
-  padding-top: 12vh;
   margin: 0px;
   background: url(../img/ecossistema_mobile.png) no-repeat center;
   display: flex;
@@ -736,7 +738,7 @@ p.calendario__box__a__p {
 .mulheres__a__p {
   color: #757575;
   margin-bottom: 2em;
-  font-size: 10pt;
+  font-size: 12pt;
 }
 
 .mulheres__b__p {
@@ -1698,7 +1700,7 @@ section#ecos__do__sistema {
   display: flex;
   justify-content: flex-start;
   padding: 2em;
-  height: 100vh;
+  height: fit-content;
 }
 
 section#ecos__do__sistema h1 {
@@ -1815,6 +1817,9 @@ section#ecos__do__sistema h2 {
   }
 }
   @media screen and (min-width: 768px) {
+
+   
+    
     textarea {
       width: 48.8vw;
       height: 50vh;
@@ -1921,6 +1926,7 @@ section#ecos__do__sistema h2 {
       justify-content: space-around;
     }
 
+
     a.grid-one {
       display: none;
     }
@@ -1977,7 +1983,7 @@ section#ecos__do__sistema h2 {
 
     .project-b__p {
       max-width: 20vw;
-      font-size: 10pt;
+      font-size: 12pt;
       margin-bottom: 20px;
     }
 
@@ -2087,7 +2093,7 @@ section#ecos__do__sistema h2 {
 }
 
 .mulheres__b button {
-  font-size: 10pt;
+  font-size: 12pt;
 }
 
 .accordion {
