@@ -14,7 +14,7 @@ a {
     transition: .5s;
     text-align: left;
     color: white;
-    font-size: 10pt;
+    font-size: 12pt;
 }
 
 
@@ -66,7 +66,7 @@ footer {
 }
 
 footer img {
-  width: 10vw;
+  width: 4vw;
   height: 6vh;
 }
 
@@ -793,14 +793,14 @@ p.calendario__box__a__p {
 }
 
 .ecossistema__perfis_h2 {
-    font-size: 1em;
+    font-size: 18pt;
     color: #780000;
     width: 75vw;
 }
 
 .meetings {
-  font-size: 10pt;
-  color: #757575;
+  font-size: 16pt;
+  color: #240000;
 }
 
 .ecossistema__perfis_img {
@@ -1875,14 +1875,14 @@ section#ecos__do__sistema h2 {
       align-items: flex-start;
       flex-direction: column;
       justify-content: start;
-      width: 13vw;
+      width: 16vw;
       margin-top: 0px;
       margin-right: 3vh;
+      /* margin-left: 8px; */
       height: 17vh;
       border: none;
       border-left: 1px solid white;
-      padding-left: 1vh;
-      padding-top: none;
+      padding-left: 3vh;
     }
 
     .footer__a div {
@@ -2004,7 +2004,7 @@ section#ecos__do__sistema h2 {
     }
 
     .project-btn {
-      font-size: 7pt;
+      font-size: 10pt;
       min-width: 20vw;
     }
 
@@ -2246,7 +2246,9 @@ section#idenditade {
 }
 
 h2.calendario__box__b__titulo {
-  width: 40vw;
+  width: 40vw;  
+  height: fit-content;
+  margin-top: 24px;
 }
 
 
