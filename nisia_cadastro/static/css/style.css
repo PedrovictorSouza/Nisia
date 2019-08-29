@@ -42,7 +42,7 @@ button:hover {
 
 button.dropbtn.aos-init.aos-animate {
   border: none;
-  font-size: 10pt;
+  font-size: 12pt;
   width: fit-content;
 }
 
@@ -57,6 +57,11 @@ h4{
   margin-left: 10px;
 }
 
+i.fas.fa-map-marker-alt {
+  width: 1.3vw;
+  font-size: 1.4em;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -66,8 +71,8 @@ footer {
 }
 
 footer img {
-  width: 4vw;
-  height: 6vh;
+  width: 6vw;
+  height: 9vh;
 }
 
 footer p {
@@ -109,6 +114,7 @@ p#patrocinio {
 
 .footer__a p {
   margin-right: 5px;
+  font-size: 12pt;
 }
 
 .footer__b {
@@ -124,7 +130,7 @@ i {
 }
 
 footer p {
-  font-size: 10pt;
+  font-size: 14pt;
   margin-left: 10px;
   margin-top: 0px;
 }
@@ -1875,7 +1881,7 @@ section#ecos__do__sistema h2 {
       align-items: flex-start;
       flex-direction: column;
       justify-content: start;
-      width: 16vw;
+      width: 23vw;
       margin-top: 0px;
       margin-right: 3vh;
       /* margin-left: 8px; */
@@ -1891,7 +1897,7 @@ section#ecos__do__sistema h2 {
 
     .footer__b {
       height: 5vh;
-      width: 19vw;
+      width: 10vw;
       display: flex;
       justify-content: space-evenly;
       /* flex-direction: column; */
