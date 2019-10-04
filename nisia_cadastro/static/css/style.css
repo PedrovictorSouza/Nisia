@@ -542,36 +542,41 @@ img.mulheres__a__svg {
 
 #mulheres__b__a {
     background-image: url('../img/thumb-03.png');
-    background-size: inherit;
+    background-size: 120px;
     background-position: right;
+    background-repeat: no-repeat;
 }
 
 #mulheres__b__b {
     background-image: url('../img/thumb-01.png');
-    background-size: inherit;
+    background-size: 120px;
     background-position: right;
+    background-repeat: no-repeat;
 }
 
 #mulheres__b__c {
     background-image: url('../img/thumb-02.png');
-    background-size: inherit;
+    background-size: 120px;
     background-position: right;
+    background-repeat: no-repeat;
 }
 
 #mulheres__b__d {
     background-image: url('../img/thumb-04.png');
-    background-size: inherit;
+    background-size: 120px;
     background-position: right;
+    background-repeat: no-repeat;
 }
 
 #mulheres__b__e {
     background-image: url('../img/thumb-05.png');
-    background-size: inherit;
+    background-size: 120px;
     background-position: right;
+    background-repeat: no-repeat;
 }
 
 #mulheres__b__f {
-    background-image: url('../img/avatar.svg');
+    background-image: url('../img/thumb-06.png');
     background-size: 120px;
     background-position: right;
     background-repeat: no-repeat;
