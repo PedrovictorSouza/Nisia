@@ -83,7 +83,7 @@ DATABASES = {
         'USER': os.environ.get('NISIA_DB_USER'),
         'PASSWORD': os.environ.get('NISIA_DB_PASS'),
         'HOST': os.environ.get('NISIA_DB_HOST'),
-        'PORT': '5432',
+        'PORT': os.environ.get('NISIA_DB_PORT'),
     }
 }
 
