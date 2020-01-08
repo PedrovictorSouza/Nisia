@@ -24,17 +24,14 @@
 
         </div>
         <ul id="menu-box" class="menu">
-            <li data-aos="fade-left" data-aos-duration="1000"><a href="https://mastertechnisia.home.blog/" target="_blank" onclick="toggleMenu()">BLOG</a>
-
-            </li>
+            <li data-aos="fade-left" data-aos-duration="1000"><a href="https://mastertechnisia.home.blog/" target="_blank" onclick="toggleMenu()">BLOG</a></li>
             <li data-aos="fade-left" data-aos-duration="1500"><a href="#project" onclick="toggleMenu()">O PROJETO</a></li>
             <li data-aos="fade-left" data-aos-duration="2000"><a href="#mulheres" onclick="toggleMenu()">PERFIS</a></li>
             <div class="dropdown">
-                <button class="dropbtn" data-aos="fade-left" data-aos-duration="2500">3 PASSOS 
+                <button class="dropbtn" data-aos="fade-left" data-aos-duration="2500">PASSOS 
 					  <i class="fa fa-caret-down"></i>
 					</button>
                 <div class="dropdown-content">
-                    <a href="#ecossistema" onclick="toggleMenu()">ECOSSISTEMA</a>
                     <a href="#sistema" onclick="toggleMenu()">SISTEMA</a>
                     <a href="#ecos__do__sistema" onclick="toggleMenu()">ECOS DO SISTEMA</a>
                 </div>
@@ -76,7 +73,7 @@
 
     <section id="mulheres">
         <div class="mulheres__a">
-            <h1 class="mulheres__a__h1" data-aos="fade-up" data-aos-duration="1000">QUAIS PERSONAGENS FAZEM PARTE DA CADEIA DE PRODUÇÃO DE TECNOLOGIA?</h1>
+            <h1 class="mulheres__a__h1" data-aos="fade-up" data-aos-duration="1000">QUAIS PERFIS FAZEM PARTE DA REDE NÍSIA?</h1>
             <p class="mulheres__a__p" data-aos="fade-up" data-aos-duration="1500">Se quisermos que as mulheres realmente tenham voz ativa na tecnologia, é preciso que todos os elos da cadeia do desenvolvimento, operação e criação da tecnologia sejam ocupados. E cada elo depende intimamente de todos os outros.</p>
             <div class="mulheres__a__symbols" data-aos="fade-up" data-aos-duration="1500">
                 <img class="mulheres__a__svg" src="{% static 'img/symbols01.svg' %}">
@@ -90,7 +87,7 @@
             <button id="mulheres__b__a" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="{% static 'img/symbols06.svg' %}"> A ESTUDANTE</button>
             <div class="panel">
                 <img src="{% static 'img/malala.png' %}" alt="">
-                <p class="mulheres__b__p__b">Malala Yousafzai é uma ativista paquistanesa. Foi a pessoa mais nova a ser laureada com um prémio Nobel. É conhecida principalmente pela defesa dos direitos humanos das mulheres e do acesso à educação na sua região natal do vale do Swat
+                <p class="mulheres__b__p__b">Malala Yousafzai é uma ativista paquistanesa. Foi a pessoa mais nova a ser laureada com um prêmio Nobel. É conhecida principalmente pela defesa dos direitos humanos das mulheres e do acesso à educação na sua região natal do vale do Swat
                     na província de Khyber Pakhtunkhwa, no nordeste do Paquistão, onde os talibãs locais impedem as jovens de frequentar a escola. Desde então, o ativismo de Malala tornou-se um movimento internacional.</p>
             </div>
 
@@ -104,87 +101,37 @@
             <button id="mulheres__b__c" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="{% static 'img/symbols08.svg' %}"> A MENTORA</button>
             <div class="panel">
                 <img src="{% static 'img/dorothy.png' %}" alt="">
-                <p class="mulheres__b__p__b">Dorothy Johnson Vaughan foi uma matemática estadunidense, que trabalhou na National Advisory Committee for Aeronautics (NACA), a agência predecessora da NASA. Em 1949, ela foi a primeira mulher negra a ser promovida chefe de departamento
-                    na NACA.</p>
+                <p class="mulheres__b__p__b">Dorothy Johnson Vaughan foi uma matemática estadunidense, que trabalhou na National Advisory Committee for Aeronautics (NACA), atual NASA, na área de rotas de vôo e programações matemáticas. Em 1949, ela foi a primeira mulher negra a ser promovida chefe de departamento
+                    na NACA. Dorothy Vaughan aposentou-se da NASA em 1971, e faleceu em novembro de 2008.</p>
             </div>
 
-            <button id="mulheres__b__d" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="{% static 'img/symbols09.svg' %}"> A EDUCADORA</button>
+            <button id="mulheres__b__d" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="{% static 'img/symbols09.svg' %}"> OS EDUCADORES</button>
             <div class="panel">
                 <img src="{% static 'img/nisia.png' %}" alt="">
-                <p class="mulheres__b__p__b">Nísia Floresta Brasileira Augusta foi uma educadora, escritora e poetisa brasileira. Primeira na educação feminista no Brasil, com protagonismo nas letras, no jornalismo e nos movimentos sociais.Defensora de ideais abolicionistas, republicanos
-                    e principalmente feministas, de consciência antecipadora para sua época, influenciou a prática educacional brasileira, rompendo limites do lugar social destinado à mulher.</p>
+                <p class="mulheres__b__p__b">Nísia Floresta Brasileira Augusta (pseudônimo de Dionísia Gonçalves Pinto) foi uma educadora, escritora e poetisa brasileira. Primeira na educação feminista no Brasil, com protagonismo em letras, no jornalismo e em movimentos sociais. Defensora de ideais abolicionistas, republicanos
+                    e principalmente feministas, com uma consciência antecipadora para sua época, influenciou a prática educacional brasileira, rompendo limites do lugar social destinado à mulher.</p>
             </div>
 
             <button id="mulheres__b__e" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="{% static 'img/symbols10.svg' %}"> A EMPREGADORA</button>
             <div class="panel">
                 <img src="{% static 'img/susan.png' %}" alt="">
-                <p class="mulheres__b__p__b">Susan Diane Wojcicki é uma executiva do ramo da tecnologia e atual diretora executiva do YouTube. Foi vice presidente sênior de propaganda e comércio no Google e conduziu projetos como o AdWords, DoubleClick, Google Analytics e AdSense,
-                    que se tornou a segunda maior fonte de receita do Google. Tratou de duas das maiores aquisições da Google: a compra do YouTube por 1.65 bilhões de dólares em 2006 e a compra da DoubleClick por 3.1 bilhões de dólares em 2007</p>
+                <p class="mulheres__b__p__b">Susan Diane Wojcicki é uma executiva estadunidense do ramo da tecnologia e atual diretora executiva do YouTube. Foi vice presidente sênior de propaganda e comércio no Google e conduziu projetos como o AdWords, DoubleClick, Google Analytics e AdSense,
+                    que se tornou a segunda maior fonte de receita do Google. Participou de duas das maiores aquisições da Google: a compra do YouTube por 1.65 bilhões de dólares em 2006 e, a compra da DoubleClick por 3.1 bilhões de dólares em 2007.</p>
 
             </div>
 
-            <button id="mulheres__b__f" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="{% static 'img/symbols11.svg' %}"> A ENTUSIASTA</button>
+            <button id="mulheres__b__f" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="{% static 'img/engrenagem.png' %}"> OS FACILITADORES</button>
             <div class="panel">
-                <p class="mulheres__b__p__b">Qualquer pessoa</p>
-
+                <img src="{% static 'img/facilitadores.png' %}" alt="">
+                <p class="mulheres__b__p__b">Facilitadores são a força motriz que imprime ritmo e potência para a rede Nísia, fazendo com que os outros perfis possam existir e trabalhar em harmonia. Eles conectam as pessoas, retiram empecilhos, ajudam de diferentes formas, pelo puro prazer de estarem contribuindo para uma causa na qual acreditam. Facilitadores vêm em todas as idades, gêneros, e de todos os lugares.</p>
             </div>
 
-
-        </div>
-    </section>
-
-    <section id="ecossistema">
-
-        <div class="ecossistema__a">
-            <div class="ecossistema__content__a">
-                <h1 class="ecossistema__title" data-aos="fade-up" data-aos-duration="1500">ECOSSISTEMA</h1>
-                <p class="main__text" data-aos="fade-up" data-aos-duration="2000"><span>Não existe a profissional sem a estudante,<br> 
-							que não existe sem professora,  <br> 
-							que não existe sem a empregadora,  <br>  
-							que não existe sem a mentora,   <br> 
-							que não existe sem a professora,   <br> 
-							que não existe sem a estudante,  <br>  
-							que não existe sem a empregadora,   <br>
-							que não existe sem a profissional, que hoje existe muito timidamente. <br> <br>  
-							</span> Somos formação em rede, formação compartilhada, auto-formação de profissionais, mentoras, estudantes e professoras. Aprendemos e crescemos umas com as outras.</p>
+            <button id="mulheres__b__g" class="accordion" data-aos="fade-up" data-aos-duration="2000"> <img class="mulheres__a__svg" src="{% static 'img/symbols11.svg' %}"> OS APOIADORES</button>
+            <div class="panel">
+                <img src="{% static 'img/apoiadores.png' %}" alt="">
+                <p class="mulheres__b__p__b">No momento turbulento de estudos e escolha de faculdade, cada estudante precisa de todo o apoio que conseguir, na escola e em casa. Os apoiadores são fundamentais no processo de autoconhecimento das meninas, pois convivem com elas fora da escola e as conhecem melhor do que ninguém. Os apoiadores são pais, mães, irmãos, irmãs, tios, tias, avôs e avós, amigos e conhecidos que fornecem um ombro amigo e apoio neste momento de vida tão relevante para o futuro das estudantes.</p>
             </div>
-        </div>
-        <div class="ecossistema__b">
-            <div class="ecossistema__content__b" data-aos="fade-up" data-aos-duration="2000">
-                <h1>QUAL É O PAPEL QUE VOCÊ DESEMPENHA HOJE?</h1>
-            </div>
-            <div data-aos="fade-up" data-aos-duration="2000">
-                <svg id="pp" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1091.7 1091.7" style="enable-background:new 0 0 1091.7 1091.7;" xml:space="preserve">
-			   <line id="path1" class="st0" x1="283.4" y1="138.5" x2="111.7" y2="672.7"/>
-			   <circle id="cir" class="st1" cx="288.3" cy="138.2" r="15.5"/>
-			   <line id="path2" class="st0" x1="1019.6" y1="669.8" x2="844.5" y2="136.7"/>
-			   <line id="path3" class="st0" x1="566.7" y1="1001" x2="1019.6" y2="669.8"/>
-			   <line id="path4" class="st0" x1="111.7" y1="672.7" x2="566.7" y2="1001"/>
-			   <line id="path5" class="st0" x1="844.5" y1="136.7" x2="283.4" y2="138.5"/>
-			   <text id="text1" onclick="rotatePentagon(2)" transform="matrix(1 0 0 1 288.0636 60.9699)" class="st1 st3">A MENTORA</text>
-			   <g>
-				   <polygon class="st7" points="758.3,184.3 291.9,230.7 192,688.6 596.5,925.1 946.5,613.5 	"/>
-				   <polygon class="st7" points="663.5,196.8 274.5,324.7 276,734.2 665.9,859.3 905.3,527.2 	"/>
-				   <polygon class="st7" points="593.8,225.7 280.5,399.9 349.4,751.7 705.3,795 856.3,469.9 	"/>
-				   <polygon class="st7" points="525.3,270.8 302.3,479 431.3,755.5 734.1,718.2 792.3,418.7 	"/>
-			   </g>
-			   <g class="st8">
-				   <text id="text2" onclick="rotatePentagon(4)" transform="matrix(-0.8076 0.5898 -0.5898 -0.8076 1049.6862 722.519)" class=" st1 st4">A EMPREENDEDORA</text>
-			   </g>
-			   <g class="st8">
-				   <text id="text3" onclick="rotatePentagon(0)" transform="matrix(-0.8109 -0.5852 0.5852 -0.8109 523.4828 1037.5326)" class=" st1 st4">A PROGRAMADORA</text>
-			   </g>
-			   <g class="st8">
-				   <text id="text4" onclick="rotatePentagon(1)" transform="matrix(0.3178 -0.9482 0.9482 0.3178 49.1521 632.1315)" class=" st1 st4">A ESTUDANTE</text>
-			   </g>
-			   <g class="st8">
-				   <text id="text5" onclick="rotatePentagon(3)" transform="matrix(0.3097 0.9508 -0.9508 0.3097 898.7365 124.4901)" class=" st1 st4">A EDUCADORA</text>
-			   </g>
-			   </svg>
-            </div>
-        </div>
-        <div class="ecossistema__perfis" data-aos="fade-up" data-aos-duration="2000">
-            <h2 class="ecossistema__perfis_h2" id="ecossistem__texto">O GIVE BACK.<br><br> <span class="meetings"><p>Repassar aprendizado</p><p>O apoio às iniciativas de base</p><p>O contato empresa-escola</p><p>A retroalimentação do ciclo com a observação dos resultados.</p></span></h2>
+
         </div>
     </section>
 
@@ -242,7 +189,7 @@
         <div class="calendario__a" ata-aos="fade-up" data-aos-duration="2000">
             <div class="calendario__sistema">
                 <h1 data-aos="fade-up" data-aos-duration="2000">CALENDÁRIO</h1>
-                <p data-aos="fade-up" data-aos-duration="2000">Você pode se cadastrar para qualquer um dos eventos de Nísia, acompanhe nosso calendário ao lado e se inscreva!</p>
+                <p data-aos="fade-up" data-aos-duration="2000">Você pode se cadastrar para qualquer um dos eventos de Nísia, acompanhe nosso calendário ao lado e inscreva-se!</p>
             </div>
         </div>
         <div class="calendario__b" data-aos="fade-up" data-aos-duration="2000">
@@ -389,7 +336,7 @@
                 </div>
 
                 <div class="identidade__form__b__b" style="width: 100%">
-                    <button>ENVIAR FORMULÁRIO</button>
+                    <button>ENVIAR RESPOSTA</button>
                 </div>
             </form>
         </div>
@@ -417,7 +364,7 @@
 
             <div>
                 <i class="far fa-envelope"></i>
-                <p>OI@MASTERTECH.TECH</p>
+                <p>OI@MASTERTECH.COM.BR</p>
             </div>
         </div>
         <div class="footer__b">
