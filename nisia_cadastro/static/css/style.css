@@ -328,12 +328,6 @@ section#mulheres {
     padding-top: 5vh;
 }
 
-.ecossistema__content__b {
-    margin-top: 1em;
-    width: 53vw;
-    margin-left: 2.5em;
-}
-
 input[type="textarea"] {
     width: 35vw;
     height: 28vh;
@@ -536,7 +530,9 @@ img.mulheres__a__svg {
 #mulheres__b__b,
 #mulheres__b__c,
 #mulheres__b__d,
-#mulheres__b__e {
+#mulheres__b__e,
+#mulheres__b__f,
+#mulheres__b__g {
     background-repeat: no-repeat;
 }
 
@@ -576,7 +572,14 @@ img.mulheres__a__svg {
 }
 
 #mulheres__b__f {
-    background-image: url('../img/thumb-06.png');
+    background-image: url('../img/facilitadores_foto_redonda.png');
+    background-size: 120px;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+#mulheres__b__g {
+    background-image: url('../img/apoiadores_foto_redonda.png');
     background-size: 120px;
     background-position: right;
     background-repeat: no-repeat;
@@ -727,40 +730,12 @@ p.calendario__box__a__p {
     flex-direction: column;
 }
 
-.ecossistema__perfis {
-    position: relative;
-}
-
-.ecossistema__a {
-    width: 100vmax;
-    height: fit-content;
-    padding-bottom: 5vh;
-    margin: 0;
-    background: url(../img/ecossistema_mobile.png) no-repeat center;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 8vw;
-}
-
-.ecossistema__content__b h1 {
-    font-size: 19pt;
-    color: #db4442;
-    border-bottom: 1px solid #db4442;
-    width: 80vw;
-    margin-top: 8vw;
-}
-
 .identidade__form__a {
     max-width: 60vw;
     border-left: 3px solid white;
     padding-left: 2em;
     height: auto;
     margin-top: 8vh;
-}
-
-.ecossistema__content__a {
-    margin-top: 4vh;
 }
 
 .mulheres__a {
@@ -807,19 +782,10 @@ p.calendario__box__a__p {
     color: #582828;
 }
 
-.ecossistema__perfis_h2 {
-    font-size: 18pt;
-    color: #780000;
-    width: 75vw;
-}
 
 .meetings {
     font-size: 1vw;
     color: #F44336;
-}
-
-.ecossistema__perfis_img {
-    width: 48vw;
 }
 
 span {
@@ -1075,7 +1041,7 @@ li:hover {
 }
 
 .identidade__form__b__c {
-    width: 90vw;
+    width: 70vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -1168,24 +1134,12 @@ svg#calendario__info {
     fill: #db4442;
 }
 
-.ecossistema__a h1 {
-    margin: 0;
-    color: #db4442;
-    font-size: 2.5em;
-    height: fit-content;
-    margin-bottom: 5vw;
-}
 
 .calendario__box__b div {
     border-bottom: 2px solid white;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-}
-
-.ecossistema__title,
-.identity {
-    margin-top: 2em;
 }
 
 .identity {
@@ -1540,12 +1494,6 @@ svg#calendario__info {
     right: 30vw;
 }
 
-.ecossistem {
-    position: relative;
-}
-
-.slider {}
-
 .slider .scrollable {
     height: 100vh;
     display: flex;
@@ -1790,14 +1738,6 @@ section#ecos__do__sistema h2 {
     justify-content: space-between;
 }
 
-.ecossistema__perfis {
-    width: 100vw;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2em;
-}
 
 .ecos__media {
     display: flex;
@@ -1816,27 +1756,6 @@ section#ecos__do__sistema h2 {
     width: 70vw;
     height: fit-content;
     margin-top: 12vh;
-}
-
-.ecossistema__a p {
-    margin: 0;
-}
-
-.ecossistema__content__a,
-{
-    border-left: 2px solid #db4442;
-    height: 20vh;
-    height: fit-content;
-    padding-left: 1em;
-}
-
-.ecossistema__b {
-    width: 100vw;
-    height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 .losango {
@@ -2041,11 +1960,7 @@ section#ecos__do__sistema h2 {
     p.ecos__do__sistema__main_text {
         margin-left: 6vw;
     }
-    .ecossistema__a {
-        padding-left: 2vw;
-        padding-top: 0;
-        box-sizing: border-box;
-    }
+    
     .project__a {
         position: relative;
         width: 30%;
@@ -2058,14 +1973,8 @@ section#ecos__do__sistema h2 {
         left: 5vw;
         z-index: 1000;
     }
-    .ecossistema__a h1 {
-        font-size: 4vw;
-        margin-bottom: 1vw;
-    }
-    section#sistema {
-        align-items: center;
-        height: 100vh;
-    }
+    
+
     .project-b__p,
     .project-btn {
         z-index: 1000;
@@ -2100,45 +2009,8 @@ section#ecos__do__sistema h2 {
         left: 26vw;
         width: 50vw;
     }
-    .ecossistema__a {
-        width: 30vw;
-        height: 100vh;
-        align-items: center;
-        background-size: 219%;
-        background-color: #780000;
-    }
-    .ecossistema__b {
-        width: 30vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        align-items: flex-start;
-        height: 100vh;
-    }
-    .ecossistema__content__b {
-        width: fit-content;
-        margin: 0;
-    }
-    .ecossistema__content__b h1 {
-        max-width: 27vw;
-        margin-left: 2vw;
-    }
-    .ecossistema__perfis_img {
-        position: absolute;
-        width: 21vw;
-        top: 6vh;
-    }
-    .ecossistema__perfis {
-        display: flex;
-        align-items: flex-start;
-        height: 100vh;
-        margin: 0;
-        width: 38vw;
-        align-items: center;
-        justify-content: center;
-    }
-    .ecos__do__sistema__b {
+
+      .ecos__do__sistema__b {
         display: flex;
         align-items: center;
         width: 98%;
@@ -2199,15 +2071,6 @@ section#ecos__do__sistema h2 {
     }
     img#perfil {
         width: 21vw;
-    }
-    .ecossistema__b h1 {
-        font-size: 18pt;
-        margin-top: 0;
-    }
-    .ecossistema__content__a {
-        max-width: 22vw;
-        border-left: 2px solid #db4442;
-        padding-left: 1em;
     }
     main img:nth-child(1) {
         width: 4vw;
