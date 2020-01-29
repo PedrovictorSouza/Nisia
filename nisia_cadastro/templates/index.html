@@ -318,6 +318,7 @@
                 {% csrf_token %}
                 <div class="identidade__input">
                     {{ form.name }} {{ form.email }}
+                    {{ form.phone }}
                 </div>
                 <div class="identidade__form__b__a">
                     <h2> {{ form.role.label }} </h2>
