@@ -15,6 +15,21 @@ form.onsubmit = e => {
     grabFormData();
 };
 
+let telephoneField = document.querySelector('#phone_id')
+
+const handleChange = e => {
+   let newValue = e.target.value.replace(/\D/g, '')
+       .match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+   e.target.value = !newValue[2] ? newValue[1] :
+       '(' + newValue[1]
+       + ') '
+       + newValue[2]
+       + (newValue[3] ? '-'
+       + newValue[3] : '');
+};
+
+telephoneField.addEventListener('input', handleChange);
+
 function getCookie(name) {
     let cookieValue = null;
     if (document.cookie) {
