@@ -7,6 +7,8 @@ class Registered(models.Model):
 
     name = models.CharField(max_length=120, verbose_name='Nome')
     email = models.CharField(max_length=120, verbose_name='Email')
+    phone = models.CharField(max_length=15)
+
     role = models.CharField(
         max_length=50,
         choices=CHOICES_ROLE,
