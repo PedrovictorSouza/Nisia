@@ -16,6 +16,7 @@ def form(request):
             registered_person = Registered()
             registered_person.name = register_form.cleaned_data['name']
             registered_person.email = register_form.cleaned_data['email']
+            registered_person.phone = register_form.cleaned_data['phone']
             registered_person.role = register_form.cleaned_data['role']
             registered_person.story = register_form.cleaned_data['story']
             try:
