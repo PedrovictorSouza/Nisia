@@ -53,3 +53,16 @@ class RegisteredForm(forms.Form):
         ),
         required = False
     )
+
+    phone = forms.CharField(
+        max_length=15,
+        label='Telefone',
+        widget=forms.TextInput(
+            attrs={
+                'data-mask': '(00) 00000-0000',
+                'required': True,
+                'id': 'phone_id',
+                'placeholder': '(99) 99999-9999'
+            }
+        )
+    )
