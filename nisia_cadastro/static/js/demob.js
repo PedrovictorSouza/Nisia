@@ -15,6 +15,21 @@ form.onsubmit = e => {
     grabFormData();
 };
 
+let telephoneField = document.querySelector('#phone_id')
+
+const handleChange = e => {
+   let newValue = e.target.value.replace(/\D/g, '')
+       .match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+   e.target.value = !newValue[2] ? newValue[1] :
+       '(' + newValue[1]
+       + ') '
+       + newValue[2]
+       + (newValue[3] ? '-'
+       + newValue[3] : '');
+};
+
+telephoneField.addEventListener('input', handleChange);
+
 function getCookie(name) {
     let cookieValue = null;
     if (document.cookie) {
@@ -33,11 +48,13 @@ function getCookie(name) {
 function grabFormData() {
     let regName = document.querySelector('input[type="text"][name="name"]').value;
     let regEmail = document.querySelector('input[type="email"][name="email"]').value;
+    let regPhone = document.querySelector('input[type="text"][name="phone"]').value;
     let regRole = document.querySelector('select[name="role"]').value;
     let regStory = document.querySelector('textarea[name="story"]').value;
     let data = {
         "name": regName,
         "email": regEmail,
+        "phone": regPhone,
         "role": regRole,
         "story": regStory
     };
