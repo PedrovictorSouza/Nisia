@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 from .models import Registered
+from .export import ExportCsvMixin
 
 
 class HasWrittenStoryListFilter(admin.SimpleListFilter):
@@ -21,9 +22,10 @@ class HasWrittenStoryListFilter(admin.SimpleListFilter):
             return queryset.filter(story__exact='')
 
 
-class RegisteredAdmin(admin.ModelAdmin):
+class RegisteredAdmin(admin.ModelAdmin, ExportCsvMixin):
     list_display = ('name', 'email', 'role', 'has_written_story', 'registered_at')
     list_filter = ('role', HasWrittenStoryListFilter, 'registered_at')
+    actions = ["export_as_csv"]
 
 admin.site.empty_value_display = 'desconhecido'
 admin.site.register(Registered, RegisteredAdmin)
