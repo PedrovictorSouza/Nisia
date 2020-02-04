@@ -17,3 +17,9 @@ class Registered(models.Model):
     )
     story = models.TextField(blank=True, null=True)
     registered_at = models.DateTimeField(auto_now_add=True, verbose_name='Cadastro efetuado')
+
+    def has_written_story(self):
+        return True if self.story else False
+    has_written_story.boolean = True
+    has_written_story.short_description = 'Escreveu a história?'
+    has_written_story.admin_order_field = 'story'
