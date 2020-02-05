@@ -125,3 +125,6 @@ USE_TZ = True
 
 STATIC_ROOT = 'shared/staticfiles'
 STATIC_URL = '/static/'
+
+CSRF_TRUSTED_ORIGINS = ['.mastertech.com.br']
+
