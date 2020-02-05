@@ -49,12 +49,14 @@ function grabFormData() {
     let regName = document.querySelector('input[type="text"][name="name"]').value;
     let regEmail = document.querySelector('input[type="email"][name="email"]').value;
     let regPhone = document.querySelector('input[type="text"][name="phone"]').value;
+    let regInsta = document.querySelector('input[type="text"][name="instagram"]').value;
     let regRole = document.querySelector('select[name="role"]').value;
     let regStory = document.querySelector('textarea[name="story"]').value;
     let data = {
         "name": regName,
         "email": regEmail,
         "phone": regPhone,
+        "instagram":regInsta,
         "role": regRole,
         "story": regStory
     };
