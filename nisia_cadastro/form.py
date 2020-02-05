@@ -41,6 +41,18 @@ class RegisteredForm(forms.Form):
         )
     )
 
+    instagram = forms.CharField(
+        max_length=120,
+        label='Instagram',
+        widget=forms.TextInput(
+            attrs={
+                'required': True,
+                'id': 'instagram_id',
+                'placeholder': 'SEU @ NO INSTAGRAM'
+            }
+        )
+    )
+
     story = forms.CharField(
         widget=forms.Textarea(
             attrs={
