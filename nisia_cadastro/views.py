@@ -18,6 +18,7 @@ def form(request):
             registered_person.email = register_form.cleaned_data['email']
             registered_person.phone = register_form.cleaned_data['phone']
             registered_person.role = register_form.cleaned_data['role']
+            registered_person.instagram = register_form.cleaned_data['instagram']
             registered_person.story = register_form.cleaned_data['story']
             try:
                 person_db = Registered.objects.get(email=register_form.cleaned_data['email'])
