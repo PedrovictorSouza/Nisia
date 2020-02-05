@@ -47,25 +47,25 @@ pipeline {
                             returnStdout: true
                         ).trim()
                     docker.image("postgres:latest").withRun(
-                            "-e 'POSTGRES_DB=${params.APP_NAME}' " +
-                            "-e 'POSTGRES_USER=${params.APP_NAME}' " +
-                            "-e 'POSTGRES_PASSWORD=${params.APP_NAME}' " +
-                            "-p $postgresPort:5432") { c ->
-                                sh "while ! pg_isready -h localhost -p $postgresPort; do sleep 1; done"
-                                withEnv(["NISIA_DB_NAME=${params.APP_NAME}",
-                                         "NISIA_DB_USER=${params.APP_NAME}",
-                                         "NISIA_DB_PASS=${params.APP_NAME}",
-                                         "NISIA_DB_HOST=localhost",
-                                         "NISIA_DB_PORT=${postgresPort}",
-                                         "NISIA_DEBUG=True"]) {
-                                    sh "python3 manage.py migrate"
-                                    sh "python3 manage.py test"
-                                }
+                        "-e 'POSTGRES_DB=${params.APP_NAME}' " +
+                        "-e 'POSTGRES_USER=${params.APP_NAME}' " +
+                        "-e 'POSTGRES_PASSWORD=${params.APP_NAME}' " +
+                        "-p $postgresPort:5432") { c ->
+                            sh "while ! pg_isready -h localhost -p $postgresPort; do sleep 1; done"
+                            withEnv(["NISIA_DB_NAME=${params.APP_NAME}",
+                                     "NISIA_DB_USER=${params.APP_NAME}",
+                                     "NISIA_DB_PASS=${params.APP_NAME}",
+                                     "NISIA_DB_HOST=localhost",
+                                     "NISIA_DB_PORT=${postgresPort}",
+                                     "NISIA_DEBUG=True"]) {
+                                sh "python3 manage.py migrate"
+                                sh "python3 manage.py test"
                             }
+                        }
                 }
             }
         }
-        stage("Publish") {
+        stage("Build and Deploy Staging") {
             when { branch 'master' }
             stages {
                 stage("Build and push image") {
@@ -102,45 +102,42 @@ pipeline {
                         }
                     }
                 }
-                stage("Deploy") {
+                stage("Deploy Staging") {
+                    when { not { expression { gitTag?.trim() } } }
                     stages {
-                        stage("Homolog") {
-                            stages {
-                                stage("Pull latest image") {
-                                    steps {
-                                        sh "ssh -t mastertech@${params.HOMOLOG_HOST} 'docker-compose " +
-                                            "-p ${params.APP_NAME} -f /app/${params.DOCKER_IMAGE}/docker-compose.yml " +
-                                            "pull ${params.APP_SERVICE}'"
-                                    }
-                                }
-                                stage("Recriate service") {
-                                    steps {
-                                        sh "ssh -t mastertech@${params.HOMOLOG_HOST} 'docker-compose " +
-                                            "-p ${params.APP_NAME} -f /app/${params.DOCKER_IMAGE}/docker-compose.yml " +
-                                            "up --no-deps -d ${params.APP_SERVICE}'"
-                                    }
-                                }
+                        stage("Pull latest image") {
+                            steps {
+                                sh "ssh -t mastertech@${params.HOMOLOG_HOST} 'docker-compose " +
+                                    "-p ${params.APP_NAME} -f /app/${params.DOCKER_IMAGE}/docker-compose.yml " +
+                                    "pull ${params.APP_SERVICE}'"
                             }
                         }
-                        stage("Production") {
-                            when { expression { gitTag?.trim() } }
-                            stages {
-                                stage("Pull latest image") {
-                                    steps {
-                                        sh "ssh -t mastertech@${params.PRODUCTION_HOST} 'docker-compose " +
-                                            "-p ${params.APP_NAME} -f /app/${params.DOCKER_IMAGE}/docker-compose.yml " +
-                                            "pull ${params.APP_SERVICE}'"
-                                    }
-                                }
-                                stage("Recriate service") {
-                                    steps {
-                                        sh "ssh -t mastertech@${params.PRODUCTION_HOST} 'docker-compose " +
-                                            "-p ${params.APP_NAME} -f /app/${params.DOCKER_IMAGE}/docker-compose.yml " +
-                                            "up --no-deps -d ${params.APP_SERVICE}'"
-                                    }
-                                }
+                        stage("Recriate service") {
+                            steps {
+                                sh "ssh -t mastertech@${params.HOMOLOG_HOST} 'docker-compose " +
+                                    "-p ${params.APP_NAME} -f /app/${params.DOCKER_IMAGE}/docker-compose.yml " +
+                                    "up --no-deps -d ${params.APP_SERVICE}'"
                             }
                         }
+                    }
+                }
+            }
+        }
+        stage("Deploy Production") {
+            when { buildingTag() }
+            stages {
+                stage("Pull latest image") {
+                    steps {
+                        sh "ssh -t mastertech@${params.PRODUCTION_HOST} 'docker-compose " +
+                            "-p ${params.APP_NAME} -f /app/${params.DOCKER_IMAGE}/docker-compose.yml " +
+                            "pull ${params.APP_SERVICE}'"
+                    }
+                }
+                stage("Recriate service") {
+                    steps {
+                        sh "ssh -t mastertech@${params.PRODUCTION_HOST} 'docker-compose " +
+                            "-p ${params.APP_NAME} -f /app/${params.DOCKER_IMAGE}/docker-compose.yml " +
+                            "up --no-deps -d ${params.APP_SERVICE}'"
                     }
                 }
             }
