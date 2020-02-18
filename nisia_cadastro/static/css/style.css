@@ -301,7 +301,6 @@ p {
 section#project {
     background-color: white;
     background-size: cover;
-    padding-bottom: 10vw;
     justify-content: center;
     align-items: center;
     background-image: url('/static/img/random_bg-01.svg');
@@ -672,10 +671,10 @@ img.mulheres__a__svg {
     color: #db4442;
 }
 
-.project-b__p {
+.project-b__p p {
     margin-left: 0;
     font-size: 12pt;
-    margin-bottom: 5vw;
+    margin-bottom: 2vw;
     color: #757575;
 }
 
@@ -1981,7 +1980,7 @@ section#ecos__do__sistema h2 {
         position: relative;
     }
     .project-b__p {
-        max-width: 20vw;
+        max-width: 40vw;
         font-size: 12pt;
         margin-bottom: 20px;
     }

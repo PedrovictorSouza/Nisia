@@ -48,43 +48,31 @@
         data-aos-duration="1000"
         ><img
           id="logo logo-btn"
-          src="{% static 'img/logo_mt.svg' %}"
+          src="{% static 'img/logo.svg' %}"
           alt="Logo da Mastertech"
       /></a>
       <a class="grid-one" onclick="toggleMenu()"></a>
 
       <ul id="menu-box" class="menu">
-        <li data-aos="fade-left" data-aos-duration="1000">
-          <a
-            href="https://mastertechnisia.home.blog/"
-            target="_blank"
-            onclick="toggleMenu()"
-            >BLOG</a
-          >
-        </li>
         <li data-aos="fade-left" data-aos-duration="1500">
-          <a href="#project" onclick="toggleMenu()">O PROJETO</a>
+          <a href="#project" onclick="toggleMenu()">SOBRE</a>
         </li>
         <li data-aos="fade-left" data-aos-duration="2000">
           <a href="#mulheres" onclick="toggleMenu()">PERFIS</a>
         </li>
-        <div class="dropdown">
-          <button class="dropbtn" data-aos="fade-left" data-aos-duration="2500">
-            PASSOS
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#sistema" onclick="toggleMenu()">SISTEMA</a>
-            <a href="#ecos__do__sistema" onclick="toggleMenu()"
-              >ECOS DO SISTEMA</a
-            >
-          </div>
-        </div>
         <li data-aos="fade-left" data-aos-duration="3000">
           <a href="#calendario" onclick="toggleMenu()">CALENDÁRIO</a>
         </li>
         <li data-aos="fade-left" data-aos-duration="3000">
-          <a href="#identidade" onclick="toggleMenu()">CONTATO</a>
+          <a href="#identidade" onclick="toggleMenu()">FALE CONOSCO</a>
+        </li>
+        <li data-aos="fade-left" data-aos-duration="3000">
+          <a
+            href="https://mastertechnisia.home.blog/"
+            target="_blank"
+            onclick="toggleMenu()"
+            >MEDIUM</a
+          >
         </li>
         <a href="#identidade"
           ><button
@@ -122,22 +110,40 @@
 
     <section id="project">
       <div class="project__a">
-        <h1 data-aos="fade-up" data-aos-duration="1000">O PROJETO</h1>
-        <p class="project-b__p" data-aos="fade-up" data-aos-duration="1500">
-          Nísia é uma comunidade de mulheres na tecnologia, e somos muitas!
-          Somos professoras, empregadoras, gestoras, mentoras, analistas,
-          estudantes e profissionais. O futuro passa pela tecnologia e você já
-          faz parte dessa rede.<br /><strong
-            >Vamos escrever esse futuro juntas.</strong
+        <h1 data-aos="fade-up" data-aos-duration="1000">SOBRE</h1>
+        <div class="project-b__p" data-aos="fade-up" data-aos-duration="1500">
+          <p>
+            Nísia é uma rede de pessoas apaixonadas. Por ciência, por
+            tecnologia, por educação, pelos desafios e discussões difíceis. Não
+            temos todas as respostas, mas procuramos fazer boas perguntas:
+          </p>
+          <p>
+            Quais são as raízes da falta de mulheres em ciência e tecnologia?
+          </p>
+          <p>Quem está olhando pra isso?</p>
+          <p>O que podemos fazer para mudar essa realidade?</p>
+          <p>
+            São apenas algumas das infinitas perguntas que nos fazemos todos os
+            dias. O melhor disso? Existem pessoas, assim como nós, se
+            perguntando as mesmas coisas em todos os cantos do Brasil.
+          </p>
+          <p>
+            Somos estudantes, mentoras, facilitadores, educadores, programadoras
+            e facilitadores.
+          </p>
+          <p>
+            Se você também é uma pessoa que busca respostas, homem ou mulher,
+            pouco importa. Precisamos de uma força gigantesca para nos ajudar a
+            transformar a relação entre mulheres, ciência e tecnologia.
+          </p>
+          <a
+            href="#identidade"
+            class="project-b__a"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            ><button class="project-btn">QUERO PARTICIPAR</button></a
           >
-        </p>
-        <a
-          href="#identidade"
-          class="project-b__a"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          ><button class="project-btn">QUERO PARTICIPAR</button></a
-        >
+        </div>
       </div>
 
       <iframe
@@ -153,13 +159,15 @@
     <section id="mulheres">
       <div class="mulheres__a">
         <h1 class="mulheres__a__h1" data-aos="fade-up" data-aos-duration="1000">
-          QUAIS PERFIS FAZEM PARTE DA REDE NÍSIA?
+          QUEM FAZ PARTE DA REDE NÍSIA?
         </h1>
         <p class="mulheres__a__p" data-aos="fade-up" data-aos-duration="1500">
-          Se quisermos que as mulheres realmente tenham voz ativa na tecnologia,
-          é preciso que todos os elos da cadeia do desenvolvimento, operação e
-          criação da tecnologia sejam ocupados. E cada elo depende intimamente
-          de todos os outros.
+          A rede Nísia é composta por sete perfis, que, juntos, fornecem apoio,
+          segurança e inteligência coletiva para despertar a curiosidade e
+          interesse de mais meninas pelas áreas de ciência e tecnologia. Quatro
+          destes perfis são exclusivos para mulheres: estudantes, programadoras,
+          empregadoras e mentoras. Os outros três são espaços inclusivos para
+          homens e mulheres: apoiadores, facilitadores e educadores.
         </p>
         <div
           class="mulheres__a__symbols"
@@ -831,7 +839,8 @@
         <form id="registrar" action="/form">
           {% csrf_token %}
           <div class="identidade__input">
-            {{ form.name }} {{ form.email }} {{ form.phone }} {{ form.instagram  }}
+            {{ form.name }} {{ form.email }} {{ form.phone }} {{ form.instagram
+            }}
           </div>
           <div class="identidade__form__b__a">
             <h2>{{ form.role.label }}</h2>
