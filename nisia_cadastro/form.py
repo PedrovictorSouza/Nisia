@@ -31,7 +31,7 @@ class RegisteredForm(forms.Form):
     )
 
     role = forms.ChoiceField(
-        label='QUAL O PAPEL QUE VOCÊ DESEMPENHA HOJE?',
+        label='COM QUAIS PERFIS VOCÊ SE IDENTIFICA HOJE?',
         choices=CHOICES_ROLE,
         widget=forms.Select(
             attrs={

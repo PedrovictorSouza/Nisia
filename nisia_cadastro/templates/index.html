@@ -709,10 +709,10 @@
                 Filme "Estrelas Além do Tempo" | Roda de Conversa
               </h2>
               <p>
-                Local: Estação Hack - Av. Paulista, 1374<br />
+                Local: WeWork - Av. Paulista, 1374<br />
                 9:30h
               </p>
-              <button>SAIBA MAIS</button>
+              <a href="https://www.sympla.com.br/pipoca-talks-1---estrelas-alem-do-tempo__779172"><button>SAIBA MAIS</button></a>
             </div>
             <br />
             <div>
@@ -751,13 +751,13 @@
           data-aos-duration="2000"
         >
           <h1 data-aos="fade-up" data-aos-duration="2000">
-            ONDE VOCÊ ESTÁ <br />
-            NESSA REDE?
+            ENCONTRE SEU LUGAR NA REDE*
           </h1>
           <p data-aos="fade-up" data-aos-duration="2000">
-            Precisamos da sua força para impactar e inspirar outras mulheres.
-            Vamos moldar o futuro da tecnologia e você pode ser parte disso.
+            Precisamos de uma força gigantesca para nos ajudar a transformar a relação entre mulheres, ciência e tecnologia. 
+            Hoje, já somos mais de 250 pessoas que compartilham essa missão, e você pode fazer parte disso.
           </p>
+          <span>*Lembre-se: Você pode se inscrever em mais de um perfil. </span>
         </div>
       </div>
       <div
@@ -768,8 +768,7 @@
         <form id="registrar" action="/form">
           {% csrf_token %}
           <div class="identidade__input">
-            {{ form.name }} {{ form.email }} {{ form.phone }} {{ form.instagram
-            }}
+            {{ form.name }} {{ form.email }} {{ form.phone }} {{ form.instagram}}
           </div>
           <div class="identidade__form__b__a">
             <h2>{{ form.role.label }}</h2>
@@ -777,12 +776,12 @@
           </div>
 
           <div class="identidade__form__b__c">
-            <h2>QUER CONTAR A SUA HISTÓRIA?</h2>
+            <h2>CONTE SUA HISTÓRIA PARA A GENTE</h2>
             <a onclick="history()">
-              <button type="button" id="yes">SIM</button>
+              <button type="button" id="yes">COMPARTILHAR</button>
             </a>
             <a id="no" onclick="deactivateHistory()">
-              <button type="button">NÃO</button>
+              <button type="button">NÃO COMPARTILHAR</button>
             </a>
             {{ form.story }}
           </div>
