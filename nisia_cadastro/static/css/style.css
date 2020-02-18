@@ -81,16 +81,18 @@ i.far.fa-envelope {
     font-size: 2.6em;
 }
 
-i.fab.fa-twitter,
+i.fab.fa-medium,
 i.fab.fa-instagram,
-i.fab.fa-youtube,
-i.fab.fa-facebook-f {
+i.fas.fa-calendar-check {
     font-size: 1.7em;
     margin-right: 15px;
 }
 
 footer {
+    align-items: center;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex-wrap: wrap;
     max-width: 100%;
     background-color: #db4340;
@@ -110,13 +112,8 @@ footer p {
 .footer__a {
     display: flex;
     align-items: center;
-    justify-content: end;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    padding-top: 1vh;
-    width: 100%;
+    justify-content: center;
+    margin: 10px;
 }
 
 p#patrocinio {
@@ -146,13 +143,11 @@ p#patrocinio {
 }
 
 .footer__a p {
-    font-size: 12pt;
-    text-align: center;
+    font-size: 11pt;
 }
 
 .footer__b {
     height: 5vh;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,16 +159,16 @@ i {
 }
 
 footer p {
-    font-size: 14pt;
+    font-size: 12pt;
     margin-top: 0;
     width: 100%;
     text-align: center;
 }
 
 .identidade__form__b__c {
-    width: 100vw;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 3vh;
 }
@@ -182,10 +177,6 @@ footer p {
     width: 98vw;
     text-align: center;
     margin-top: 4vh;
-}
-
-.identidade__form__b__c button {
-    width: 43vw;
 }
 
 h1,
@@ -1027,7 +1018,8 @@ li:hover {
 }
 
 .identidade__form__b__a,
-.identidade__form__b__b {
+.identidade__form__b__b,
+.identidade__form__b__c {
     border: none;
     display: flex;
     flex-direction: column;
@@ -1041,22 +1033,21 @@ li:hover {
 }
 
 .identidade__form__b__c {
-    width: 70vw;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 3vh;
 }
 
 .identidade__form__b__c h2 {
-    width: 91vw;
+    width: 80vw;
     text-align: left;
     margin-bottom: 10px;
     margin-top: 7vh;
 }
 
 .identidade__form__b__c button {
-    width: 43vw;
     margin-right: 5px;
     margin-bottom: 2vh;
 }
@@ -1896,25 +1887,24 @@ section#ecos__do__sistema h2 {
         margin-top: 0;
         flex-direction: row;
         width: fit-content;
-        margin: 0px 20px 20px 20px;
+        margin: 5px 44px 24px 42px;
         justify-content: flex-start;
     }
     .footer__b {
         justify-content: center;
         align-items: flex-start;
-        margin-left: 10px;
+        margin-left: 20px;
         padding-left: 10px;
         margin-top: 30px;
     }
     .footer__c {
-        margin-right: 1vw;
         width: 100%;
         text-align: center;
-        margin-bottom: 3vh;
+        margin-bottom: 50px;
     }
     footer p {
         text-align: center;
-        font-size: 14pt;
+        font-size: 12pt;
     }
     footer img {
         width: 3vw;

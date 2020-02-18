@@ -712,7 +712,10 @@
                 Local: WeWork - Av. Paulista, 1374<br />
                 9:30h
               </p>
-              <a href="https://www.sympla.com.br/pipoca-talks-1---estrelas-alem-do-tempo__779172"><button>SAIBA MAIS</button></a>
+              <a
+                href="https://www.sympla.com.br/pipoca-talks-1---estrelas-alem-do-tempo__779172"
+                ><button>SAIBA MAIS</button></a
+              >
             </div>
             <br />
             <div>
@@ -754,8 +757,10 @@
             ENCONTRE SEU LUGAR NA REDE*
           </h1>
           <p data-aos="fade-up" data-aos-duration="2000">
-            Precisamos de uma força gigantesca para nos ajudar a transformar a relação entre mulheres, ciência e tecnologia. 
-            Hoje, já somos mais de 250 pessoas que compartilham essa missão, e você pode fazer parte disso.
+            Precisamos de uma força gigantesca para nos ajudar a transformar a
+            relação entre mulheres, ciência e tecnologia. Hoje, já somos mais de
+            250 pessoas que compartilham essa missão, e você pode fazer parte
+            disso.
           </p>
           <span>*Lembre-se: Você pode se inscrever em mais de um perfil. </span>
         </div>
@@ -768,7 +773,7 @@
         <form id="registrar" action="/form">
           {% csrf_token %}
           <div class="identidade__input">
-            {{ form.name }} {{ form.email }} {{ form.phone }} {{ form.instagram}}
+            {{ form.name }} {{ form.email }} {{ form.phone }} {{form.instagram}}
           </div>
           <div class="identidade__form__b__a">
             <h2>{{ form.role.label }}</h2>
@@ -777,8 +782,8 @@
 
           <div class="identidade__form__b__c">
             <h2>CONTE SUA HISTÓRIA PARA A GENTE</h2>
-            <a onclick="history()">
-              <button type="button" id="yes">COMPARTILHAR</button>
+            <a id="yes" onclick="history()">
+              <button type="button">COMPARTILHAR</button>
             </a>
             <a id="no" onclick="deactivateHistory()">
               <button type="button">NÃO COMPARTILHAR</button>
@@ -786,7 +791,7 @@
             {{ form.story }}
           </div>
 
-          <div class="identidade__form__b__b" style="width: 100%">
+          <div class="identidade__form__b__b">
             <button>ENVIAR RESPOSTA</button>
           </div>
         </form>
@@ -801,7 +806,7 @@
     <footer>
       <div class="footer__c">
         <a href="https://mastertech.com.br/" style="cursor: pointer;"
-          ><img src="{% static 'img/logo_mt.svg' %}" alt="Logo da Mastertech"
+          ><img src="{% static 'img/logo.svg' %}" alt="Logo da Mastertech"
         /></a>
         <p>
           Somos colecionadores de fracassos, sempre em busca do próximo. <br />
@@ -813,22 +818,22 @@
       <div class="footer__a">
         <div>
           <i class="fas fa-map-marker-alt"></i>
-          <p>
-            Av. Paulista, 1374 - Bela Vista <br />
-            São Paulo/SP | WeWork Paulista
-          </p>
+          <p>Av. Paulista, 1374 <br />Bela Vista - São Paulo/SP</p>
         </div>
 
         <div>
           <i class="far fa-envelope"></i>
-          <p>oi@mastertech.com.br</p>
+          <p>nisia@mastertech.com.br</p>
         </div>
       </div>
       <div class="footer__b">
-        <a><i class="fab fa-facebook-f"></i></a>
-        <a><i class="fab fa-twitter"></i></a>
-        <a><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-youtube"></i></a>
+        <a href="https://medium.com/nisia"><i class="fab fa-medium"></i></a>
+        <a href="https://www.instagram.com/mastertechnisia/"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.sympla.com.br/mastertech"
+          ><i class="fas fa-calendar-check"></i
+        ></a>
       </div>
     </footer>
 
