@@ -41,6 +41,7 @@ button {
     padding-left: 10px;
     padding-right: 10px;
     min-height: 40px;
+    margin-left: 15px;
 }
 
 button:hover {
@@ -245,7 +246,6 @@ nav {
     min-height: 4vh;
     z-index: 1001;
     width: 100%;
-    height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -257,6 +257,51 @@ nav img {
     margin-left: 25px;
     width: 6vw;
     margin: 0;
+}
+
+.grid-one {
+    height: 25px;
+    width: 25px;
+    margin: 0;
+    background-image: url('../img/sanduba.svg');
+    margin-right: 2vw;
+}
+
+.grid-two{
+    height: 25px;
+    width: 25px;
+    margin: 0;
+    background-image: url('../img/close.svg');
+    margin-right: 2vw;
+
+    }
+
+.menu-desktop{
+    display: none;
+}
+
+.menu{
+    background: #5d1a19d4;
+    width: 100%;
+    position: absolute;
+    top: 33px;
+    transform: translateY(-150%);
+    height: 100vh;
+    display: flex;
+}
+
+.menu.visible{
+    display: block;
+}
+
+.menu.open{
+    transform: translateY(0);
+}
+
+.menu a {
+    display: block;
+    margin: 20px;
+    text-align: center;
 }
 
 section {
@@ -367,7 +412,6 @@ section#calendario h1 {
     margin-top: 0;
 }
 
-section#ecos__do__sistema div {}
 
 img.mulheres__a__svg {
     margin-right: 1vw;
@@ -1594,14 +1638,6 @@ text:hover {
     background: blue;
 }
 
-.grid-one {
-    height: 25px;
-    width: 25px;
-    margin: 0;
-    z-index: 100;
-    background-image: url('../img/sanduba.svg');
-    margin-right: 2vw;
-}
 
 #grid-one:hover span {
     box-shadow: -8px -8px 0 white, -8px 0 0 white, -8px 8px 0 white, 0 -8px 0 white, 0 8px 0 white, 8px -8px 0 white, 8px 0 0 white, 8px 8px 0 white;
@@ -1624,7 +1660,7 @@ text:hover {
     height: 4px;
     left: 0%;
     margin: -4px 0 0 0;
-    transform: rotate(45deg);
+    transform: rotateZ(-45deg);
     background: #f91120;
 }
 
@@ -1808,20 +1844,7 @@ section#ecos__do__sistema h2 {
     iframe {
         margin-top: 4vh;
     }
-    .menu {
-        display: none;
-        background: #5d1a19d4;
-        height: 100vh;
-        width: 100%;
-        position: absolute;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        right: 0;
-        margin-top: 0;
-        transition: .5s;
-    }
+
     input[type="text"],
     input[type="email"] {
         width: 100%;
@@ -1843,6 +1866,18 @@ section#ecos__do__sistema h2 {
     nav img {
         width: 40px;
     }
+
+    .menu{
+        display: none;
+    }
+
+    .menu-desktop{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
     .infografico {
         width: 52vw;
         height: 75vh;
@@ -1934,14 +1969,12 @@ section#ecos__do__sistema h2 {
     ul button {
         height: 4vh;
     }
-    ul.menu {
-        display: flex;
-        align-items: center;
-        width: fit-content;
-        justify-content: space-around;
-        margin: 0;
+
+    
+    .grid-one {
+        display: none;
     }
-    a.grid-one {
+    .grid-two{
         display: none;
     }
     .calendario__box__b__data {
@@ -2007,7 +2040,7 @@ section#ecos__do__sistema h2 {
         justify-content: space-around;
     }
     .mulheres__a {
-        flex-direction: inherit;
+        flex-direction: row;
         align-items: center;
         margin-top: 0;
         padding-bottom: 0;
@@ -2020,7 +2053,7 @@ section#ecos__do__sistema h2 {
     }
     .mulheres__a__p {
         max-width: 30vw;
-        margin-left: 2vw;
+        margin-left: 4vw;
         margin-right: 2vw;
     }
     .mulheres__a__svg {

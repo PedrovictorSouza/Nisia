@@ -41,7 +41,8 @@
   <body class="demo-1">
     <nav data-aos="fade-down">
       <!-- AQUI FICA A LOGO (SVG) -->
-      <a
+      <div>
+        <a
         class="logo-a"
         href="#home"
         data-aos="fade-left"
@@ -51,29 +52,50 @@
           src="{% static 'img/logo.svg' %}"
           alt="Logo da Mastertech"
       /></a>
-      <a class="grid-one" onclick="toggleMenu()"></a>
+    </div>
+    <span class="grid-one" id="toggle-menu"></span>
+      <div class="menu">
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#project"
+          onclick="toggleMenu()"
+          >SOBRE</a
+        >
 
-      <ul id="menu-box" class="menu">
-        <li data-aos="fade-left" data-aos-duration="1500">
-          <a href="#project" onclick="toggleMenu()">SOBRE</a>
-        </li>
-        <li data-aos="fade-left" data-aos-duration="2000">
-          <a href="#mulheres" onclick="toggleMenu()">PERFIS</a>
-        </li>
-        <li data-aos="fade-left" data-aos-duration="3000">
-          <a href="#calendario" onclick="toggleMenu()">CALENDÁRIO</a>
-        </li>
-        <li data-aos="fade-left" data-aos-duration="3000">
-          <a href="#identidade" onclick="toggleMenu()">FALE CONOSCO</a>
-        </li>
-        <li data-aos="fade-left" data-aos-duration="3000">
-          <a
-            href="https://mastertechnisia.home.blog/"
-            target="_blank"
-            onclick="toggleMenu()"
-            >MEDIUM</a
-          >
-        </li>
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#mulheres"
+          onclick="toggleMenu()"
+          >PERFIS</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#calendario"
+          onclick="toggleMenu()"
+          >CALENDÁRIO</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#identidade"
+          onclick="toggleMenu()"
+          >FALE CONOSCO</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="https://medium.com/nisia"
+          target="_blank"
+          onclick="toggleMenu()"
+          >MEDIUM</a
+        >
+
         <a href="#identidade"
           ><button
             id="menu__btn"
@@ -84,7 +106,60 @@
             QUERO PARTICIPAR
           </button></a
         >
-      </ul>
+      </div>
+      <div class="menu-desktop">
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#project"
+          onclick="toggleMenu()"
+          >SOBRE</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#mulheres"
+          onclick="toggleMenu()"
+          >PERFIS</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#calendario"
+          onclick="toggleMenu()"
+          >CALENDÁRIO</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#identidade"
+          onclick="toggleMenu()"
+          >FALE CONOSCO</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="https://medium.com/nisia"
+          target="_blank"
+          onclick="toggleMenu()"
+          >MEDIUM</a
+        >
+
+        <a href="#identidade"
+          ><button
+            id="menu__btn"
+            data-aos="fade-left"
+            data-aos-duration="3000"
+            onclick="toggleMenu()"
+          >
+            QUERO PARTICIPAR
+          </button></a
+        >
+      </div>
     </nav>
 
     <img
@@ -849,6 +924,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
     <script src="{% static 'js/demob.js' %}"></script>
     <script src="{% static 'js/accordion.js' %}"></script>
     <script src="{% static 'js/animation.js' %}"></script>
