@@ -497,46 +497,29 @@
           </p>
         </div>
       </div>
-          <div class="calendario__box__b">
-            <div>
-              <h2 class="calendario__box__b__data">16 FEV</h2>
-              <h2 class="calendario__box__b__titulo">
-                Filme "Estrelas Além do Tempo" | Roda de Conversa
-              </h2>
-              <p>
-                Local: WeWork - Av. Paulista, 1374<br />
-                9:30h
-              </p>
-              <a
-                href="https://www.sympla.com.br/pipoca-talks-1---estrelas-alem-do-tempo__779172"
-                ><button>SAIBA MAIS</button></a
-              >
-            </div>
-            <br />
-            <div>
-              <h2 class="calendario__box__b__data">09 NOV</h2>
-              <h2 class="calendario__box__b__titulo">
-                erradicando tabus: tecnologia sem genero
-              </h2>
-              <p>
-                LOCAL(a definir)<br />
-                19H
-              </p>
-              <button>MAIS</button>
-            </div>
-            <div>
-              <h2 class="calendario__box__b__data">07 DEZ</h2>
-              <h2 class="calendario__box__b__titulo">
-                o mercado de trabalho tradicional, as startups & o profissional
-                freelancer.
-              </h2>
-              <p>
-                LOCAL(a definir)<br />
-                19H
-              </p>
-              <button>MAIS</button>
-            </div>
+      <div class="calendario__b" data-aos="fade-up" data-aos-duration="2000">
+        <div class="calendario__box">
+          <div class="calendario__box__a">
+            <h1>2020</h1>
           </div>
+          <div class="calendario__box__b">
+          {% for post in posts %}
+          <div>
+              <h2 class="calendario__box__b__data">{{ post.date_event }}</h2>
+              <h2 class="calendario__box__b__titulo">
+                {{ post.title }}
+              </h2>
+              <p>Descrição: {{ post.description }}</p>
+              <p>Local: {{ post.adress }}</p>
+              <p>Horário: {{ post.start_time }} até {{ post.end_time }}</p>
+              <p>Tipo de evento: {{ post.type_event }}</p>
+              <a href="{{ post.slug }}"><button>SAIBA MAIS</button></a>
+            <br />
+          </div>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="identidade">
