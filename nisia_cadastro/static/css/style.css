@@ -41,6 +41,7 @@ button {
     padding-left: 10px;
     padding-right: 10px;
     min-height: 40px;
+    margin-left: 15px;
 }
 
 button:hover {
@@ -81,16 +82,18 @@ i.far.fa-envelope {
     font-size: 2.6em;
 }
 
-i.fab.fa-twitter,
+i.fab.fa-medium,
 i.fab.fa-instagram,
-i.fab.fa-youtube,
-i.fab.fa-facebook-f {
+i.fas.fa-calendar-check {
     font-size: 1.7em;
     margin-right: 15px;
 }
 
 footer {
+    align-items: center;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex-wrap: wrap;
     max-width: 100%;
     background-color: #db4340;
@@ -110,13 +113,8 @@ footer p {
 .footer__a {
     display: flex;
     align-items: center;
-    justify-content: end;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    padding-top: 1vh;
-    width: 100%;
+    justify-content: center;
+    margin: 10px;
 }
 
 p#patrocinio {
@@ -146,13 +144,11 @@ p#patrocinio {
 }
 
 .footer__a p {
-    font-size: 12pt;
-    text-align: center;
+    font-size: 11pt;
 }
 
 .footer__b {
     height: 5vh;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,16 +160,16 @@ i {
 }
 
 footer p {
-    font-size: 14pt;
+    font-size: 12pt;
     margin-top: 0;
     width: 100%;
     text-align: center;
 }
 
 .identidade__form__b__c {
-    width: 100vw;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 3vh;
 }
@@ -182,10 +178,6 @@ footer p {
     width: 98vw;
     text-align: center;
     margin-top: 4vh;
-}
-
-.identidade__form__b__c button {
-    width: 43vw;
 }
 
 h1,
@@ -254,7 +246,6 @@ nav {
     min-height: 4vh;
     z-index: 1001;
     width: 100%;
-    height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -266,6 +257,51 @@ nav img {
     margin-left: 25px;
     width: 6vw;
     margin: 0;
+}
+
+.grid-one {
+    height: 25px;
+    width: 25px;
+    margin: 0;
+    background-image: url('../img/sanduba.svg');
+    margin-right: 2vw;
+}
+
+.grid-two{
+    height: 25px;
+    width: 25px;
+    margin: 0;
+    background-image: url('../img/close.svg');
+    margin-right: 2vw;
+
+    }
+
+.menu-desktop{
+    display: none;
+}
+
+.menu{
+    background: #5d1a19d4;
+    width: 100%;
+    position: absolute;
+    top: 33px;
+    transform: translateY(-150%);
+    height: 100vh;
+    display: flex;
+}
+
+.menu.visible{
+    display: block;
+}
+
+.menu.open{
+    transform: translateY(0);
+}
+
+.menu a {
+    display: block;
+    margin: 20px;
+    text-align: center;
 }
 
 section {
@@ -301,7 +337,6 @@ p {
 section#project {
     background-color: white;
     background-size: cover;
-    padding-bottom: 10vw;
     justify-content: center;
     align-items: center;
     background-image: url('/static/img/random_bg-01.svg');
@@ -377,7 +412,6 @@ section#calendario h1 {
     margin-top: 0;
 }
 
-section#ecos__do__sistema div {}
 
 img.mulheres__a__svg {
     margin-right: 1vw;
@@ -672,10 +706,10 @@ img.mulheres__a__svg {
     color: #db4442;
 }
 
-.project-b__p {
+.project-b__p p {
     margin-left: 0;
     font-size: 12pt;
-    margin-bottom: 5vw;
+    margin-bottom: 2vw;
     color: #757575;
 }
 
@@ -790,6 +824,7 @@ p.calendario__box__a__p {
 
 span {
     color: #bdbdbd;
+    font-size: 10pt;
 }
 
 .meetings p {
@@ -1027,7 +1062,8 @@ li:hover {
 }
 
 .identidade__form__b__a,
-.identidade__form__b__b {
+.identidade__form__b__b,
+.identidade__form__b__c {
     border: none;
     display: flex;
     flex-direction: column;
@@ -1041,22 +1077,21 @@ li:hover {
 }
 
 .identidade__form__b__c {
-    width: 70vw;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 3vh;
 }
 
 .identidade__form__b__c h2 {
-    width: 91vw;
+    width: 80vw;
     text-align: left;
     margin-bottom: 10px;
     margin-top: 7vh;
 }
 
 .identidade__form__b__c button {
-    width: 43vw;
     margin-right: 5px;
     margin-bottom: 2vh;
 }
@@ -1603,14 +1638,6 @@ text:hover {
     background: blue;
 }
 
-.grid-one {
-    height: 25px;
-    width: 25px;
-    margin: 0;
-    z-index: 100;
-    background-image: url('../img/sanduba.svg');
-    margin-right: 2vw;
-}
 
 #grid-one:hover span {
     box-shadow: -8px -8px 0 white, -8px 0 0 white, -8px 8px 0 white, 0 -8px 0 white, 0 8px 0 white, 8px -8px 0 white, 8px 0 0 white, 8px 8px 0 white;
@@ -1633,7 +1660,7 @@ text:hover {
     height: 4px;
     left: 0%;
     margin: -4px 0 0 0;
-    transform: rotate(45deg);
+    transform: rotateZ(-45deg);
     background: #f91120;
 }
 
@@ -1817,20 +1844,7 @@ section#ecos__do__sistema h2 {
     iframe {
         margin-top: 4vh;
     }
-    .menu {
-        display: none;
-        background: #5d1a19d4;
-        height: 100vh;
-        width: 100%;
-        position: absolute;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        right: 0;
-        margin-top: 0;
-        transition: .5s;
-    }
+
     input[type="text"],
     input[type="email"] {
         width: 100%;
@@ -1852,6 +1866,18 @@ section#ecos__do__sistema h2 {
     nav img {
         width: 40px;
     }
+
+    .menu{
+        display: none;
+    }
+
+    .menu-desktop{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
     .infografico {
         width: 52vw;
         height: 75vh;
@@ -1896,25 +1922,24 @@ section#ecos__do__sistema h2 {
         margin-top: 0;
         flex-direction: row;
         width: fit-content;
-        margin: 0px 20px 20px 20px;
+        margin: 5px 44px 24px 42px;
         justify-content: flex-start;
     }
     .footer__b {
         justify-content: center;
         align-items: flex-start;
-        margin-left: 10px;
+        margin-left: 20px;
         padding-left: 10px;
         margin-top: 30px;
     }
     .footer__c {
-        margin-right: 1vw;
         width: 100%;
         text-align: center;
-        margin-bottom: 3vh;
+        margin-bottom: 50px;
     }
     footer p {
         text-align: center;
-        font-size: 14pt;
+        font-size: 12pt;
     }
     footer img {
         width: 3vw;
@@ -1944,14 +1969,12 @@ section#ecos__do__sistema h2 {
     ul button {
         height: 4vh;
     }
-    ul.menu {
-        display: flex;
-        align-items: center;
-        width: fit-content;
-        justify-content: space-around;
-        margin: 0;
+
+    
+    .grid-one {
+        display: none;
     }
-    a.grid-one {
+    .grid-two{
         display: none;
     }
     .calendario__box__b__data {
@@ -1981,7 +2004,7 @@ section#ecos__do__sistema h2 {
         position: relative;
     }
     .project-b__p {
-        max-width: 20vw;
+        max-width: 40vw;
         font-size: 12pt;
         margin-bottom: 20px;
     }
@@ -2017,7 +2040,7 @@ section#ecos__do__sistema h2 {
         justify-content: space-around;
     }
     .mulheres__a {
-        flex-direction: inherit;
+        flex-direction: row;
         align-items: center;
         margin-top: 0;
         padding-bottom: 0;
@@ -2030,7 +2053,7 @@ section#ecos__do__sistema h2 {
     }
     .mulheres__a__p {
         max-width: 30vw;
-        margin-left: 2vw;
+        margin-left: 4vw;
         margin-right: 2vw;
     }
     .mulheres__a__svg {

@@ -13,7 +13,7 @@ class Registered(models.Model):
     role = models.CharField(
         max_length=50,
         choices=CHOICES_ROLE,
-        verbose_name='Qual o papel que você desempenha hoje?',
+        verbose_name='Com quais perfis você se identifica hoje?',
         default='A ESTUDANTE'
     )
     story = models.TextField(blank=True, null=True)

@@ -41,51 +41,61 @@
   <body class="demo-1">
     <nav data-aos="fade-down">
       <!-- AQUI FICA A LOGO (SVG) -->
-      <a
+      <div>
+        <a
         class="logo-a"
         href="#home"
         data-aos="fade-left"
         data-aos-duration="1000"
         ><img
           id="logo logo-btn"
-          src="{% static 'img/logo_mt.svg' %}"
+          src="{% static 'img/logo.svg' %}"
           alt="Logo da Mastertech"
       /></a>
-      <a class="grid-one" onclick="toggleMenu()"></a>
+    </div>
+    <span class="grid-one" id="toggle-menu"></span>
+      <div class="menu">
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#project"
+          onclick="toggleMenu()"
+          >SOBRE</a
+        >
 
-      <ul id="menu-box" class="menu">
-        <li data-aos="fade-left" data-aos-duration="1000">
-          <a
-            href="https://mastertechnisia.home.blog/"
-            target="_blank"
-            onclick="toggleMenu()"
-            >BLOG</a
-          >
-        </li>
-        <li data-aos="fade-left" data-aos-duration="1500">
-          <a href="#project" onclick="toggleMenu()">O PROJETO</a>
-        </li>
-        <li data-aos="fade-left" data-aos-duration="2000">
-          <a href="#mulheres" onclick="toggleMenu()">PERFIS</a>
-        </li>
-        <div class="dropdown">
-          <button class="dropbtn" data-aos="fade-left" data-aos-duration="2500">
-            PASSOS
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#sistema" onclick="toggleMenu()">SISTEMA</a>
-            <a href="#ecos__do__sistema" onclick="toggleMenu()"
-              >ECOS DO SISTEMA</a
-            >
-          </div>
-        </div>
-        <li data-aos="fade-left" data-aos-duration="3000">
-          <a href="#calendario" onclick="toggleMenu()">CALENDÁRIO</a>
-        </li>
-        <li data-aos="fade-left" data-aos-duration="3000">
-          <a href="#identidade" onclick="toggleMenu()">CONTATO</a>
-        </li>
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#mulheres"
+          onclick="toggleMenu()"
+          >PERFIS</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#calendario"
+          onclick="toggleMenu()"
+          >CALENDÁRIO</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#identidade"
+          onclick="toggleMenu()"
+          >FALE CONOSCO</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="https://medium.com/nisia"
+          target="_blank"
+          onclick="toggleMenu()"
+          >MEDIUM</a
+        >
+
         <a href="#identidade"
           ><button
             id="menu__btn"
@@ -96,7 +106,60 @@
             QUERO PARTICIPAR
           </button></a
         >
-      </ul>
+      </div>
+      <div class="menu-desktop">
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#project"
+          onclick="toggleMenu()"
+          >SOBRE</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#mulheres"
+          onclick="toggleMenu()"
+          >PERFIS</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#calendario"
+          onclick="toggleMenu()"
+          >CALENDÁRIO</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#identidade"
+          onclick="toggleMenu()"
+          >FALE CONOSCO</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="https://medium.com/nisia"
+          target="_blank"
+          onclick="toggleMenu()"
+          >MEDIUM</a
+        >
+
+        <a href="#identidade"
+          ><button
+            id="menu__btn"
+            data-aos="fade-left"
+            data-aos-duration="3000"
+            onclick="toggleMenu()"
+          >
+            QUERO PARTICIPAR
+          </button></a
+        >
+      </div>
     </nav>
 
     <img
@@ -122,22 +185,40 @@
 
     <section id="project">
       <div class="project__a">
-        <h1 data-aos="fade-up" data-aos-duration="1000">O PROJETO</h1>
-        <p class="project-b__p" data-aos="fade-up" data-aos-duration="1500">
-          Nísia é uma comunidade de mulheres na tecnologia, e somos muitas!
-          Somos professoras, empregadoras, gestoras, mentoras, analistas,
-          estudantes e profissionais. O futuro passa pela tecnologia e você já
-          faz parte dessa rede.<br /><strong
-            >Vamos escrever esse futuro juntas.</strong
+        <h1 data-aos="fade-up" data-aos-duration="1000">SOBRE</h1>
+        <div class="project-b__p" data-aos="fade-up" data-aos-duration="1500">
+          <p>
+            Nísia é uma rede de pessoas apaixonadas. Por ciência, por
+            tecnologia, por educação, pelos desafios e discussões difíceis. Não
+            temos todas as respostas, mas procuramos fazer boas perguntas:
+          </p>
+          <p>
+            Quais são as raízes da falta de mulheres em ciência e tecnologia?
+          </p>
+          <p>Quem está olhando pra isso?</p>
+          <p>O que podemos fazer para mudar essa realidade?</p>
+          <p>
+            São apenas algumas das infinitas perguntas que nos fazemos todos os
+            dias. O melhor disso? Existem pessoas, assim como nós, se
+            perguntando as mesmas coisas em todos os cantos do Brasil.
+          </p>
+          <p>
+            Somos estudantes, mentoras, facilitadores, educadores, programadoras
+            e facilitadores.
+          </p>
+          <p>
+            Se você também é uma pessoa que busca respostas, homem ou mulher,
+            pouco importa. Precisamos de uma força gigantesca para nos ajudar a
+            transformar a relação entre mulheres, ciência e tecnologia.
+          </p>
+          <a
+            href="#identidade"
+            class="project-b__a"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            ><button class="project-btn">QUERO PARTICIPAR</button></a
           >
-        </p>
-        <a
-          href="#identidade"
-          class="project-b__a"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          ><button class="project-btn">QUERO PARTICIPAR</button></a
-        >
+        </div>
       </div>
 
       <iframe
@@ -153,13 +234,15 @@
     <section id="mulheres">
       <div class="mulheres__a">
         <h1 class="mulheres__a__h1" data-aos="fade-up" data-aos-duration="1000">
-          QUAIS PERFIS FAZEM PARTE DA REDE NÍSIA?
+          QUEM FAZ PARTE DA REDE NÍSIA?
         </h1>
         <p class="mulheres__a__p" data-aos="fade-up" data-aos-duration="1500">
-          Se quisermos que as mulheres realmente tenham voz ativa na tecnologia,
-          é preciso que todos os elos da cadeia do desenvolvimento, operação e
-          criação da tecnologia sejam ocupados. E cada elo depende intimamente
-          de todos os outros.
+          A rede Nísia é composta por sete perfis, que, juntos, fornecem apoio,
+          segurança e inteligência coletiva para despertar a curiosidade e
+          interesse de mais meninas pelas áreas de ciência e tecnologia. Quatro
+          destes perfis são exclusivos para mulheres: estudantes, programadoras,
+          empregadoras e mentoras. Os outros três são espaços inclusivos para
+          homens e mulheres: apoiadores, facilitadores e educadores.
         </p>
         <div
           class="mulheres__a__symbols"
@@ -400,77 +483,6 @@
             amigo e apoio neste momento de vida tão relevante para o futuro das
             estudantes.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="sistema">
-      <div>
-        <div data-aos="fade-up" data-aos-duration="2000">
-          <h1 data-aos="fade-up" data-aos-duration="2000">SISTEMA</h1>
-          <p class="main__text" data-aos="fade-up" data-aos-duration="2000">
-            Nísia é uma comunidade ativa e produtiva com encontros mensais onde
-            são propostos debates, geração de ideias que criação de protótipos.
-            Todo o material produzido é uso livre. Cada encontro é divulgado
-            para toda comunidade e aberto para novas participantes.
-          </p>
-        </div>
-      </div>
-      <div id="sistema__b" data-aos="fade-up" data-aos-duration="2000">
-        <img
-          class="infografico"
-          src="{% static 'img/info.svg' %}"
-          alt="Infográfico ilustrativo das etapas do projeto"
-        />
-        <a href="#calendario"><button>VER CALENDÁRIO</button></a>
-      </div>
-    </section>
-
-    <section id="ecos__do__sistema">
-      <div class="ecos__do__sistema__title main__text"></div>
-      <div class="ecos__do__sistema__b">
-        <h1 data-aos="fade-up" data-aos-duration="2000">
-          ECOS<br />
-          DO SISTEMA
-        </h1>
-        <p
-          class="ecos__do__sistema__main_text"
-          data-aos="fade-up"
-          data-aos-duration="2000"
-        >
-          Todo material produzido pela comunidade Nisia será compartilhado e
-          serve como fomento à participação feminina na cadeia de produção da
-          tecnologia. <br /><br />
-          A produção de Nisia envolve toda a sorte de ideias que suas
-          participantes possam sugerir, entre eles: artigos acadêmicos,
-          materiais áudio-visuais, pesquisas, softwares open source, materiais
-          artísticos, etc... E todos estão disponíveis para consulta e/ou
-          downloads.
-        </p>
-        <a href="#identidade"
-          ><button class="ecos-btn" data-aos="fade-up" data-aos-duration="2000">
-            QUERO PARTICIPAR
-          </button></a
-        >
-      </div>
-      <div class="ecos__media" data-aos="fade-up" data-aos-duration="2000">
-        <div>
-          <a class="ecos__media__a">
-            <h2>BLOG</h2>
-            <span>em breve.</span>
-          </a>
-        </div>
-        <div>
-          <a class="ecos__media__a">
-            <h2>DOWNLOADS</h2>
-            <span>em breve.</span>
-          </a>
-        </div>
-        <div>
-          <a class="ecos__media__a">
-            <h2>VÍDEOS</h2>
-            <span>em breve.</span>
-          </a>
         </div>
       </div>
     </section>
@@ -772,10 +784,13 @@
                 Filme "Estrelas Além do Tempo" | Roda de Conversa
               </h2>
               <p>
-                Local: Estação Hack - Av. Paulista, 1374<br />
+                Local: WeWork - Av. Paulista, 1374<br />
                 9:30h
               </p>
-              <button>SAIBA MAIS</button>
+              <a
+                href="https://www.sympla.com.br/pipoca-talks-1---estrelas-alem-do-tempo__779172"
+                ><button>SAIBA MAIS</button></a
+              >
             </div>
             <br />
             <div>
@@ -814,13 +829,15 @@
           data-aos-duration="2000"
         >
           <h1 data-aos="fade-up" data-aos-duration="2000">
-            ONDE VOCÊ ESTÁ <br />
-            NESSA REDE?
+            ENCONTRE SEU LUGAR NA REDE*
           </h1>
           <p data-aos="fade-up" data-aos-duration="2000">
-            Precisamos da sua força para impactar e inspirar outras mulheres.
-            Vamos moldar o futuro da tecnologia e você pode ser parte disso.
+            Precisamos de uma força gigantesca para nos ajudar a transformar a
+            relação entre mulheres, ciência e tecnologia. Hoje, já somos mais de
+            250 pessoas que compartilham essa missão, e você pode fazer parte
+            disso.
           </p>
+          <span>*Lembre-se: Você pode se inscrever em mais de um perfil. </span>
         </div>
       </div>
       <div
@@ -831,7 +848,7 @@
         <form id="registrar" action="/form">
           {% csrf_token %}
           <div class="identidade__input">
-            {{ form.name }} {{ form.email }} {{ form.phone }} {{ form.instagram  }}
+            {{ form.name }} {{ form.email }} {{ form.phone }} {{form.instagram}}
           </div>
           <div class="identidade__form__b__a">
             <h2>{{ form.role.label }}</h2>
@@ -839,17 +856,17 @@
           </div>
 
           <div class="identidade__form__b__c">
-            <h2>QUER CONTAR A SUA HISTÓRIA?</h2>
-            <a onclick="history()">
-              <button type="button" id="yes">SIM</button>
+            <h2>CONTE SUA HISTÓRIA PARA A GENTE</h2>
+            <a id="yes" onclick="history()">
+              <button type="button">COMPARTILHAR</button>
             </a>
             <a id="no" onclick="deactivateHistory()">
-              <button type="button">NÃO</button>
+              <button type="button">NÃO COMPARTILHAR</button>
             </a>
             {{ form.story }}
           </div>
 
-          <div class="identidade__form__b__b" style="width: 100%">
+          <div class="identidade__form__b__b">
             <button>ENVIAR RESPOSTA</button>
           </div>
         </form>
@@ -864,7 +881,7 @@
     <footer>
       <div class="footer__c">
         <a href="https://mastertech.com.br/" style="cursor: pointer;"
-          ><img src="{% static 'img/logo_mt.svg' %}" alt="Logo da Mastertech"
+          ><img src="{% static 'img/logo.svg' %}" alt="Logo da Mastertech"
         /></a>
         <p>
           Somos colecionadores de fracassos, sempre em busca do próximo. <br />
@@ -876,22 +893,22 @@
       <div class="footer__a">
         <div>
           <i class="fas fa-map-marker-alt"></i>
-          <p>
-            Av. Paulista, 1374 - Bela Vista <br />
-            São Paulo/SP | WeWork Paulista
-          </p>
+          <p>Av. Paulista, 1374 <br />Bela Vista - São Paulo/SP</p>
         </div>
 
         <div>
           <i class="far fa-envelope"></i>
-          <p>oi@mastertech.com.br</p>
+          <p>nisia@mastertech.com.br</p>
         </div>
       </div>
       <div class="footer__b">
-        <a><i class="fab fa-facebook-f"></i></a>
-        <a><i class="fab fa-twitter"></i></a>
-        <a><i class="fab fa-instagram"></i></a>
-        <a><i class="fab fa-youtube"></i></a>
+        <a href="https://medium.com/nisia"><i class="fab fa-medium"></i></a>
+        <a href="https://www.instagram.com/mastertechnisia/"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.sympla.com.br/mastertech"
+          ><i class="fas fa-calendar-check"></i
+        ></a>
       </div>
     </footer>
 
@@ -907,6 +924,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
     <script src="{% static 'js/demob.js' %}"></script>
     <script src="{% static 'js/accordion.js' %}"></script>
     <script src="{% static 'js/animation.js' %}"></script>

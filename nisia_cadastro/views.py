@@ -21,12 +21,12 @@ def form(request):
             registered_person.instagram = register_form.cleaned_data['instagram']
             registered_person.story = register_form.cleaned_data['story']
             try:
-                person_db = Registered.objects.get(email=register_form.cleaned_data['email'])
-                msg = {"status": 400, "result": "Você já está cadastrada"}
+                person_db = Registered.objects.get(role=register_form.cleaned_data['role'])
+                msg = {"status": 400, "result": "Você já está cadastrada(o) neste perfil"}
                 return HttpResponse(json.dumps(msg), status=400)
             except:
                 registered_person.save()
-                msg = {"status": 200, "result": "Cadastrada com sucesso!"}
+                msg = {"status": 200, "result": "Cadastrada(o) com sucesso!"}
                 return HttpResponse(json.dumps(msg), status=200)
         else:
             msg = {"status": 400, "result": "Dados inválidos"}
