@@ -1,12 +1,16 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from nisia_cadastro.models import Registered
+from nisia_cadastro.models import Registered, Calendar
 from nisia_cadastro.form import RegisteredForm
 import json
 
 def index(request):
-    return render(request, 'index.html',
-        {'form': RegisteredForm})
+    posts = Calendar.objects.filter(is_active=True).all()
+    args = {
+        'posts':posts,
+        'form': RegisteredForm
+    }
+    return render(request, 'index.html', args)
 
 def form(request):
     msg = {}
