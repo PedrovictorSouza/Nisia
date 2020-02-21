@@ -43,17 +43,17 @@
       <!-- AQUI FICA A LOGO (SVG) -->
       <div>
         <a
-        class="logo-a"
-        href="#home"
-        data-aos="fade-left"
-        data-aos-duration="1000"
-        ><img
-          id="logo logo-btn"
-          src="{% static 'img/logo.svg' %}"
-          alt="Logo da Mastertech"
-      /></a>
-    </div>
-    <span class="grid-one" id="toggle-menu"></span>
+          class="logo-a"
+          href="#home"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          ><img
+            id="logo logo-btn"
+            src="{% static 'img/logo.svg' %}"
+            alt="Logo da Mastertech"
+        /></a>
+      </div>
+      <span class="grid-one" id="toggle-menu"></span>
       <div class="menu">
         <a
           data-aos="fade-left"
@@ -281,7 +281,7 @@
           id="mulheres__b__a"
           class="accordion"
           data-aos="fade-up"
-          data-aos-duration="2000"
+          data-aos-duration="1500"
         >
           <img
             class="mulheres__a__svg"
@@ -488,7 +488,7 @@
     </section>
 
     <section id="calendario">
-      <div class="calendario__a" ata-aos="fade-up" data-aos-duration="1500">
+      <div class="calendario__a" ata-aos="fade-up" data-aos-duration="1000">
         <div class="calendario__sistema">
           <h1 data-aos="fade-up" data-aos-duration="1500">CALENDÁRIO</h1>
           <p data-aos="fade-up" data-aos-duration="1500">
@@ -503,20 +503,20 @@
             <h1>2020</h1>
           </div>
           <div class="calendario__box__b">
-          {% for post in posts %}
-          <div>
+            {% for post in posts %}
+            <div>
               <h2 class="calendario__box__b__data">{{ post.date_event }}</h2>
               <h2 class="calendario__box__b__titulo">
                 {{ post.title }}
               </h2>
-              <p>Descrição: {{ post.description }}</p> 
+              <p>Descrição: {{ post.description }}</p>
               <p>Local: {{ post.adress }}</p>
               <p>Horário: {{ post.start_time }} até {{ post.end_time }}</p>
               <p>Tipo de evento: {{ post.type_event }}</p>
               <a href="{{ post.slug }}"><button>SAIBA MAIS</button></a>
-            <br />
-          </div>
-          {% endfor %}
+              <br />
+            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -538,7 +538,7 @@
             250 pessoas que compartilham essa missão, e você pode fazer parte
             disso.
           </p>
-          <span>*Lembre-se: Você pode se inscrever em mais de um perfil. </span>
+          <span data-aos="fade-up" data-aos-duration="2500">*Lembre-se: Você pode se inscrever em mais de um perfil. </span>
         </div>
       </div>
       <div
@@ -568,7 +568,7 @@
           </div>
 
           <div class="identidade__form__b__b">
-            <button>ENVIAR RESPOSTA</button>
+            <button onClick="clearForm()">ENVIAR RESPOSTA</button>
           </div>
         </form>
       </div>

@@ -376,7 +376,7 @@ select {
     -webkit-border-radius: 0;
     border: 0;
     outline: 1px solid white;
-    background: transparent;
+    background: #5c0000;
     color: white;
     margin-top: 10px;
 }

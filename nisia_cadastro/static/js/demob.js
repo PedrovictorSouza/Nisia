@@ -82,6 +82,15 @@ function submitForm(data) {
     });
 };
 
+function clearForm(){
+    let inputs = document.querySelectorAll('input, select, textarea');
+
+    for(let input of inputs){
+        input.value = '';
+    }
+}
+
+
 function activateModal(text) {
     modal_text.innerHTML = text;
     modal.style.display = "flex";

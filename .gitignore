@@ -24,3 +24,5 @@ ENV/
 .idea
 
 Pipfile
+
+.DS_Store
