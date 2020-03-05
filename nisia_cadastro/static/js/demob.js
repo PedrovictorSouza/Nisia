@@ -63,6 +63,15 @@ function grabFormData() {
     return submitForm(data);
 }
 
+function clearForm(){
+    let inputs = document.querySelectorAll('input, select, textarea');
+
+    for(let input of inputs){
+        input.value = '';
+    }
+}
+
+
 function submitForm(data) {
     let csrftoken = getCookie('csrftoken');
 
@@ -74,6 +83,7 @@ function submitForm(data) {
     }).then(function(response) {
         return response.json();
     }).then(function(data) {
+        clearForm();
         if (data.status == 200) {
             activateModal(data.result);
         } else {
@@ -82,13 +92,6 @@ function submitForm(data) {
     });
 };
 
-function clearForm(){
-    let inputs = document.querySelectorAll('input, select, textarea');
-
-    for(let input of inputs){
-        input.value = '';
-    }
-}
 
 
 function activateModal(text) {
