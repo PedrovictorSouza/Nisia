@@ -7,6 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NISIA</title>
     <meta name="author" content="Codrops" />
+    <!-- Popup cookies -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/cookie.css' %}"
+    />
+    <script>
+      let i = new Date;
+
+      const AcceptCookieLGPD = () => {
+        return setCookie("acpt", "1", "900"), document.getElementById("cookie-banner-lgpd").style.display = "none"
+      }
+
+      const setCookie = (e, t, n) => {
+        let o = "";
+        if (n) {
+          i.setTime(i.getTime() + 24 * n * 60 * 60 * 1e3), o = "; expires=" + i.toUTCString()
+        }
+        document.cookie = e + "=" + (t || "") + o + "; path=/"
+      }
+
+      const startGetCookie = (e) => {
+        for (let t = e + "=", n = document.cookie.split(";"), o = 0; o < n.length; o++) {
+          for (let i = n[o]; " " === i.charAt(0);) i = i.substring(1, i.length);
+          if (0 === i.toString().indexOf(t)) return i.substring(t.length, i.length)
+        }
+        return null
+      }
+      "1" === startGetCookie("acpt") && (document.getElementById("cookie-banner-lgpd").style.display = "none");
+    </script>
+    <div id="cookie-banner-lgpd" class="cookie-banner-lgpd-visible cookie-banner-lgpd-animated" style="display:flex">
+      <div class="cookie-banner-lgpd-container">
+        <div class="cookie-banner-lgpd_text-box"><span class="cookie-banner-lgpd_text">
+                Nós usamos cookies e outras tecnologias semelhantes para melhorar a sua experiência em nossos serviços.
+                Ao utilizar nossos serviços, você concorda com tal monitoramento. Informamos ainda que atualizamos nossa
+                <a
+                  class="cookie-banner-lgpd-link cookie-banner-lgpd_privacy-link" target="_blank"
+                  style="color:#0069de"
+                  href="https://mastertech.com.br/politica-de-privacidade">Política de Privacidade</a> <span>.</span> </span></div>
+        <div class="cookie-banner-lgpd_button-box"><a onclick={AcceptCookieLGPD()} href="javascript:void(0);"
+                                                      class="cookie-banner-lgpd_accept-button"
+                                                      style="background-color:#0069de">PROSSEGUIR</a></div>
+      </div>
+    </div>
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
     <link
       rel="stylesheet"
