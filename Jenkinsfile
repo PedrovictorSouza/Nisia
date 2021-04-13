@@ -2,28 +2,12 @@ pipeline {
     agent any
     parameters {
         string(
-            name: "HOMOLOG_HOST",
-            defaultValue:"nisia.homolog.mastertech.com.br"
-        )
-        string(
-            name: "PRODUCTION_HOST",
-            defaultValue:"nisia.mastertech.com.br"
-        )
-        string(
-            name: "UTILS_PATH",
-            defaultValue:"/var/lib/jenkins/utils"
-        )
-        string(
-            name: "APP_NAME",
-            defaultValue:"nisia"
-        )
-        string(
-            name: "APP_SERVICE",
-            defaultValue:"server"
+            name: "APP_SERVICE_NAME",
+            defaultValue: "nisia"
         )
         string(
             name: "DOCKER_IMAGE",
-            defaultValue:"nisia"
+            defaultValue: "docker.mastertech.com.br/${params.APP_SERVICE_NAME}"
         )
     }
     post {
@@ -76,25 +60,26 @@ pipeline {
                                 returnStdout: true
                             ).trim()
 
-                            dockerTag = env.BUILD_ID
+                            dockerTag = sh (
+                                script: 'git rev-parse --short HEAD',
+                                returnStdout: true
+                            ).trim()
+
                             if(gitTag?.trim()) {
                                 dockerTag = gitTag
                             }
 
-                            sh "cp ${params.UTILS_PATH}/nginx-gunicorn.conf nginx.conf"
-                            sh "cp ${params.UTILS_PATH}/supervisor-nginx-gunicorn.conf supervisord.conf"
-
                             withCredentials([
-                                usernamePassword(
-                                    credentialsId: 'mastertech-docker-registry',
-                                    passwordVariable: 'PASSWORD',
-                                    usernameVariable: 'USERNAME')
-                                ]) {
-                                    sh "docker login -p $PASSWORD -u $USERNAME docker.mastertech.com.br"
-                                }
+                            usernamePassword(
+                                credentialsId: 'mastertech-docker-registry',
+                                passwordVariable: 'PASSWORD',
+                                usernameVariable: 'USERNAME')
+                            ]) {
+                                sh "docker login -p $PASSWORD -u $USERNAME docker.mastertech.com.br"
+                            }
 
                             docker.withRegistry("https://docker.mastertech.com.br",
-                                "mastertech-docker-registry") {
+                            "mastertech-docker-registry") {
                                 def newImage = docker.build("${params.DOCKER_IMAGE}",
                                     "--no-cache -t ${params.DOCKER_IMAGE}:$dockerTag .")
                                 newImage.push()
@@ -103,43 +88,18 @@ pipeline {
                     }
                 }
                 stage("Deploy Staging") {
-                    when { not { expression { gitTag?.trim() } } }
-                    stages {
-                        stage("Pull latest image") {
-                            steps {
-                                sh "ssh -t mastertech@${params.HOMOLOG_HOST} 'docker-compose " +
-                                    "-p ${params.APP_NAME} -f /app/${params.DOCKER_IMAGE}/docker-compose.yml " +
-                                    "pull ${params.APP_SERVICE}'"
-                            }
-                        }
-                        stage("Recriate service") {
-                            steps {
-                                sh "ssh -t mastertech@${params.HOMOLOG_HOST} 'docker-compose " +
-                                    "-p ${params.APP_NAME} -f /app/${params.DOCKER_IMAGE}/docker-compose.yml " +
-                                    "up --no-deps -d ${params.APP_SERVICE}'"
-                            }
-                        }
+                    steps {
+                        sh "kubectl apply -f deploy/staging.yaml"
+                        sh "kubectl rollout restart deploy ${params.APP_SERVICE_NAME} -n staging"
                     }
                 }
             }
         }
         stage("Deploy Production") {
             when { buildingTag() }
-            stages {
-                stage("Pull latest image") {
-                    steps {
-                        sh "ssh -t mastertech@${params.PRODUCTION_HOST} 'docker-compose " +
-                            "-p ${params.APP_NAME} -f /app/${params.DOCKER_IMAGE}/docker-compose.yml " +
-                            "pull ${params.APP_SERVICE}'"
-                    }
-                }
-                stage("Recriate service") {
-                    steps {
-                        sh "ssh -t mastertech@${params.PRODUCTION_HOST} 'docker-compose " +
-                            "-p ${params.APP_NAME} -f /app/${params.DOCKER_IMAGE}/docker-compose.yml " +
-                            "up --no-deps -d ${params.APP_SERVICE}'"
-                    }
-                }
+            steps {
+                sh "kubectl apply -f deploy/production.yaml"
+                sh "kubectl rollout restart deploy ${params.APP_SERVICE_NAME} -n production"
             }
         }
     }
