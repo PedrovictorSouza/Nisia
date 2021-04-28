@@ -15,7 +15,7 @@ a {
     text-align: left;
     color: white;
     font-size: 12pt;
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 nav {
@@ -41,7 +41,6 @@ button {
     padding-left: 10px;
     padding-right: 10px;
     min-height: 40px;
-    margin-left: 15px;
 }
 
 button:hover {
@@ -67,25 +66,15 @@ button.dropbtn.aos-init.aos-animate {
     font-size: 10pt;
 }
 
-h4 {
-    font-size: 7pt;
-    color: white;
-    margin-left: 10px;
-}
-
-i.fas.fa-map-marker-alt {
-    font-size: 2.4em;
-    margin-bottom: 10px;
-}
-
+i.fas.fa-map-marker-alt, 
 i.far.fa-envelope {
-    font-size: 2.6em;
+    font-size: 2rem;
 }
 
 i.fab.fa-medium,
 i.fab.fa-instagram,
 i.fas.fa-calendar-check {
-    font-size: 1.7em;
+    font-size: 2em;
     margin-right: 15px;
 }
 
@@ -97,7 +86,7 @@ footer {
     flex-wrap: wrap;
     max-width: 100%;
     background-color: #db4340;
-    padding: 5vw;
+    padding: 30px;
 }
 
 footer img {
@@ -111,9 +100,6 @@ footer p {
 }
 
 .footer__a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 10px;
 }
 
@@ -144,7 +130,7 @@ p#patrocinio {
 }
 
 .footer__a p {
-    font-size: 11pt;
+    font-size: 12px;
 }
 
 .footer__b {
@@ -358,9 +344,7 @@ svg#calendario__meses {
 }
 
 section#mulheres {
-    width: 100vw;
     height: fit-content;
-    padding-top: 5vh;
 }
 
 input[type="textarea"] {
@@ -512,12 +496,6 @@ img.mulheres__a__svg {
 
 .calendario__box {
     margin: 0 auto;
-    margin-top: 12vh;
-}
-
-.calendario__b {
-    display: flex;
-    position: relative;
 }
 
 .accordion {
@@ -758,8 +736,7 @@ p.calendario__box__a__p {
 
 .calendario__sistema {
     border-left: 4px solid white;
-    padding-left: 2em;
-    flex-direction: column;
+    padding: 2rem;
 }
 
 .identidade__form__a {
@@ -1698,11 +1675,6 @@ text.st0.st1.st2.st3 {
     color: blue;
 }
 
-.calendario__sistema {
-    margin-top: 15vh;
-    margin-bottom: 2em;
-}
-
 .ecos__media {
     justify-content: center;
 }
@@ -1880,6 +1852,10 @@ section#ecos__do__sistema h2 {
         width: 40px;
     }
 
+    .footer__a {
+        display: flex;
+    }
+
     .menu{
         display: none;
     }
@@ -1909,18 +1885,6 @@ section#ecos__do__sistema h2 {
     footer {
         justify-content: space-between;
     }
-    .footer__a {
-        border-top: none;
-        border-bottom: none;
-        /* flex-direction: column; */
-        justify-content: center;
-        align-items: flex-start;
-        margin-top: 0;
-        margin-bottom: 0;
-        height: fit-content;
-        padding: 0;
-        padding-left: 1vw;
-    }
     .footer__a p {
         text-align: left;
         font-size: 10pt;
@@ -1929,7 +1893,7 @@ section#ecos__do__sistema h2 {
     i.far.fa-envelope {
         margin-right: 10px;
         margin-bottom: 0;
-        font-size: 1.8em;
+        font-size: 2rem;
     }
     .footer__a div {
         margin-top: 0;
@@ -2120,10 +2084,6 @@ section#ecos__do__sistema h2 {
     }
     svg#calendario__info {
         margin: 0;
-    }
-    .calendario__sistema {
-        max-width: 28vw;
-        margin-left: 0;
     }
     .calendario__box {
         max-width: 59vw;
