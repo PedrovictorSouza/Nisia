@@ -100,6 +100,14 @@ footer {
     padding: 5vw;
 }
 
+.policy-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  flex-direction: column;
+}
+
 footer img {
     width: 100vw;
     height: 5vh;
@@ -116,7 +124,6 @@ footer p {
     justify-content: center;
     margin: 10px;
 }
-
 p#patrocinio {
     position: absolute;
     top: 70vh;
