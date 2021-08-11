@@ -1,0 +1,701 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NISIA</title>
+    <meta name="author" content="Codrops" />
+    <!-- Popup cookies -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/cookie.css' %}"
+    />
+    <script>
+      let i = new Date;
+
+      const AcceptCookieLGPD = () => {
+        return setCookie("acpt", "1", "900"), document.getElementById("cookie-banner-lgpd").style.display = "none"
+      }
+
+      const setCookie = (e, t, n) => {
+        let o = "";
+        if (n) {
+          i.setTime(i.getTime() + 24 * n * 60 * 60 * 1e3), o = "; expires=" + i.toUTCString()
+        }
+        document.cookie = e + "=" + (t || "") + o + "; path=/"
+      }
+
+      const startGetCookie = (e) => {
+        for (let t = e + "=", n = document.cookie.split(";"), o = 0; o < n.length; o++) {
+          for (let i = n[o]; " " === i.charAt(0);) i = i.substring(1, i.length);
+          if (0 === i.toString().indexOf(t)) return i.substring(t.length, i.length)
+        }
+        return null
+      }
+      "1" === startGetCookie("acpt") && (document.getElementById("cookie-banner-lgpd").style.display = "none");
+    </script>
+    <div id="cookie-banner-lgpd" class="cookie-banner-lgpd-visible cookie-banner-lgpd-animated" style="display:flex">
+      <div class="cookie-banner-lgpd-container">
+        <div class="cookie-banner-lgpd_text-box"><span class="cookie-banner-lgpd_text">
+                Nós usamos cookies e outras tecnologias semelhantes para melhorar a sua experiência em nossos serviços.
+                Ao utilizar nossos serviços, você concorda com tal monitoramento. Informamos ainda que atualizamos nossa
+                <a
+                  class="cookie-banner-lgpd-link cookie-banner-lgpd_privacy-link" target="_blank"
+                  style="color:#0069de"
+                  href="https://mastertech.com.br/politica-de-privacidade">Política de Privacidade</a> <span>.</span> </span></div>
+        <div class="cookie-banner-lgpd_button-box"><a onclick={AcceptCookieLGPD()} href="javascript:void(0);"
+                                                      class="cookie-banner-lgpd_accept-button"
+                                                      style="background-color:#0069de">PROSSEGUIR</a></div>
+      </div>
+    </div>
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton|Jura|Niramit|Roboto:200,300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-153525669-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-153525669-2");
+    </script>
+  </head>
+
+  <body class="demo-1">
+    <nav data-aos="fade-down">
+      <!-- AQUI FICA A LOGO (SVG) -->
+      <div>
+        <a
+          class="logo-a"
+          href="#home"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          ><img
+            id="logo logo-btn"
+            src="{% static 'img/logo.svg' %}"
+            alt="Logo da Mastertech"
+        /></a>
+      </div>
+      <span class="grid-one" id="toggle-menu"></span>
+      <div class="menu">
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#project"
+          onclick="toggleMenu()"
+          >SOBRE</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#mulheres"
+          onclick="toggleMenu()"
+          >PERFIS</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#calendario"
+          onclick="toggleMenu()"
+          >CALENDÁRIO</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#identidade"
+          onclick="toggleMenu()"
+          >FALE CONOSCO</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="https://medium.com/nisia"
+          target="_blank"
+          onclick="toggleMenu()"
+          >MEDIUM</a
+        >
+
+        <a href="#identidade"
+          ><button
+            id="menu__btn"
+            data-aos="fade-left"
+            data-aos-duration="3000"
+            onclick="toggleMenu()"
+          >
+            QUERO PARTICIPAR
+          </button></a
+        >
+      </div>
+      <div class="menu-desktop">
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#project"
+          onclick="toggleMenu()"
+          >SOBRE</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#mulheres"
+          onclick="toggleMenu()"
+          >PERFIS</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#calendario"
+          onclick="toggleMenu()"
+          >CALENDÁRIO</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="#identidade"
+          onclick="toggleMenu()"
+          >FALE CONOSCO</a
+        >
+
+        <a
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          href="https://medium.com/nisia"
+          target="_blank"
+          onclick="toggleMenu()"
+          >MEDIUM</a
+        >
+
+        <a href="#identidade"
+          ><button
+            id="menu__btn"
+            data-aos="fade-left"
+            data-aos-duration="3000"
+            onclick="toggleMenu()"
+          >
+            QUERO PARTICIPAR
+          </button></a
+        >
+      </div>
+    </nav>
+
+    <img
+      id="title_nisia"
+      class="content__title"
+      src="{% static 'img/logonisia.svg' %}"
+      alt="Logo de Nísia"
+    />
+
+    <main id="home">
+      <!--	<a style="position: relative; bottom: 3vw;" onClick="homeAnimation()"><img id="home-btn" src="./img/arrow.svg" alt="" data-aos="zoom-out-up" data-aos-duration="1500"></a> -->
+
+      <div class="content">
+        <div class="glitch">
+          <div class="glitch__img"></div>
+          <div class="glitch__img"></div>
+          <div class="glitch__img"></div>
+          <div class="glitch__img"></div>
+          <div class="glitch__img"></div>
+        </div>
+      </div>
+    </main>
+
+    <section id="project">
+      <div class="project__a">
+        <h1 data-aos="fade-up" data-aos-duration="1000">SOBRE</h1>
+        <div class="project-b__p" data-aos="fade-up" data-aos-duration="1500">
+          <p>
+            Nísia é uma rede de pessoas apaixonadas. Por ciência, por
+            tecnologia, por educação, pelos desafios e discussões difíceis. Não
+            temos todas as respostas, mas procuramos fazer boas perguntas:
+          </p>
+          <p>
+            Quais são as raízes da falta de mulheres em ciência e tecnologia?
+          </p>
+          <p>Quem está olhando pra isso?</p>
+          <p>O que podemos fazer para mudar essa realidade?</p>
+          <p>
+            São apenas algumas das infinitas perguntas que nos fazemos todos os
+            dias. O melhor disso? Existem pessoas, assim como nós, se
+            perguntando as mesmas coisas em todos os cantos do Brasil.
+          </p>
+          <p>
+            Somos estudantes, mentoras, facilitadores, educadores, programadoras
+            e facilitadores.
+          </p>
+          <p>
+            Se você também é uma pessoa que busca respostas, homem ou mulher,
+            pouco importa. Precisamos de uma força gigantesca para nos ajudar a
+            transformar a relação entre mulheres, ciência e tecnologia.
+          </p>
+          <a
+            href="#identidade"
+            class="project-b__a"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            ><button class="project-btn">QUERO PARTICIPAR</button></a
+          >
+        </div>
+      </div>
+
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/ET_mRNNAI8k"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </section>
+
+    <section id="mulheres">
+      <div class="mulheres__a">
+        <h1 class="mulheres__a__h1" data-aos="fade-up" data-aos-duration="1000">
+          QUEM FAZ PARTE DA REDE NÍSIA?
+        </h1>
+        <p class="mulheres__a__p" data-aos="fade-up" data-aos-duration="1000">
+          A rede Nísia é composta por sete perfis, que, juntos, fornecem apoio,
+          segurança e inteligência coletiva para despertar a curiosidade e
+          interesse de mais meninas pelas áreas de ciência e tecnologia. Quatro
+          destes perfis são exclusivos para mulheres: estudantes, programadoras,
+          empregadoras e mentoras. Os outros três são espaços inclusivos para
+          homens e mulheres: apoiadores, facilitadores e educadores.
+        </p>
+        <div
+          class="mulheres__a__symbols"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <img
+            class="mulheres__a__svg"
+            src="{% static 'img/symbols01.svg' %}"
+            alt="Símbolo ilustrativo de um triângulo"
+          />
+          <img
+            class="mulheres__a__svg"
+            src="{% static 'img/symbols02.svg' %}"
+            alt="Símbolo ilustrativo de um pentagono"
+          />
+          <img
+            class="mulheres__a__svg"
+            src="{% static 'img/symbols03.svg' %}"
+            alt="Símbolo ilustrativo de quatro argolas intersectadas"
+          />
+          <img
+            class="mulheres__a__svg"
+            src="{% static 'img/symbols04.svg' %}"
+            alt="Símbolo ilustrativo de um hexagono"
+          />
+          <img
+            class="mulheres__a__svg"
+            src="{% static 'img/symbols05.svg' %}"
+            alt="Símbolo ilustrativo de um círculo"
+          />
+        </div>
+      </div>
+      <div class="mulheres__b">
+        <button
+          id="mulheres__b__a"
+          class="accordion"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          <img
+            class="mulheres__a__svg"
+            src="{% static 'img/symbols06.svg' %}"
+            alt="Símbolo ilustrativo de um triângulo"
+          />
+          A ESTUDANTE
+        </button>
+        <div class="panel">
+          <img src="{% static 'img/malala.png' %}" alt="Malala Yousafzai" />
+          <p class="mulheres__b__p__b">
+            Você já se perguntou muitas vezes sobre qual faculdade seguir? Já
+            disse que era "ruim de exatas" ou pensou que era tão impossível que
+            nem se deu a chance de tentar? Pois é. Infelizmente isso acontece
+            diariamente com muitas mulheres. Não temos todas as respostas, e nem
+            um único caminho certo. Queremos te mostrar como enxergamos ciência
+            e tecnologia: o passado, o presente e o futuro que iremos construir.
+            Se você gosta de ciência, matemática e tecnologia mas tem medo de
+            arriscar, se inscreva na Rede Nísia. Aqui você encontrará uma rede
+            de mulheres para te ajudar a ir de encontro com as respostas que já
+            moram dentro de você.
+          </p>
+        </div>
+
+        <button
+          id="mulheres__b__b"
+          class="accordion"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          <img
+            class="mulheres__a__svg"
+            src="{% static 'img/symbols07.svg' %}"
+            alt="Símbolo ilustrativo de um pentagono"
+          />
+          A PROGRAMADORA
+        </button>
+        <div class="panel">
+          <img src="{% static 'img/ada.png' %}" alt="Ada Lovelace" />
+          <p class="mulheres__b__p__b">
+            Python? JavaScript? SQL? Ruby? Em meio a tantas opções e
+            requerimentos pelo mercado de trabalho, fica difícil saber por onde
+            começar. Essa é a realidade de muitas meninas em tecnologia, que,
+            além de não saberem por onde começar a aprender, também não
+            encontram muitas oportunidades e pessoas dispostas a ajudar. Se você
+            é programadora (mesmo sem trabalhar na área) e têm vontade de ajudar
+            outras mulheres e passar seu conhecimento para frente, se cadastre
+            na Rede Nísia e nos ajude a levar conhecimento de programação para
+            meninas ao redor do país.
+          </p>
+        </div>
+
+        <button
+          id="mulheres__b__c"
+          class="accordion"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          <img
+            class="mulheres__a__svg"
+            src="{% static 'img/symbols08.svg' %}"
+            alt="Símbolo ilustrativo de quatro argolas intersectadas"
+          />
+          A MENTORA
+        </button>
+        <div class="panel">
+          <img src="{% static 'img/dorothy.png' %}" alt="Dorothy Vaughan" />
+          <p class="mulheres__b__p__b">
+            Se você pudesse voltar no tempo para começar sua carreira de novo,
+            quais conselhos você se daria? Aprenda inglês? Foque em lógica?
+            Busque outras mulheres para te apoiar? Tenha calma? Esses são
+            exemplos de mensagens que podem mudar a trajetória da vida de outras
+            meninas e mulheres pelo Brasil. E é isso que torna as mentoras
+            essenciais para a Rede Nísia. Mentoras não precisam ser formadas ou
+            trabalhar diretamente com tecnologia, mas precisam ter em si uma
+            vontade muito grande em ajudar outras mulheres a se encontrarem, e
+            superarem os muitos desafios que uma carreira em tecnologia, sendo
+            mulher, traz.
+          </p>
+        </div>
+
+        <button
+          id="mulheres__b__d"
+          class="accordion"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          <img
+            class="mulheres__a__svg"
+            src="{% static 'img/symbols09.svg' %}"
+            alt="Símbolo ilustrativo de um hexagono"
+          />
+          OS EDUCADORES
+        </button>
+        <div class="panel">
+          <img
+            src="{% static 'img/nisia.png' %}"
+            alt="Nísia Floresta Brasileira Augusta"
+          />
+          <p class="mulheres__b__p__b">
+            Existe uma missão muito grande por trás do ato de virar educador.
+            Independente do que os tenha levado a esse caminho, é inegável que,
+            para muitos, essa é uma experiência profunda e pessoal. Ser educador
+            vai muito além de um cargo ou profissão. Você não nasce educador,
+            você se torna. Em Nísia, queremos resolver a questão da falta de
+            mulheres em tecnologia na base, conversando com a menina que já
+            reproduz preconceitos sociais de lugar sem muitas vezes se dar conta
+            disso, e os educadores são o nosso maior aliado. Educadores são
+            professores, orientadores educacionais, coordenadores pedagógicos,
+            secretários de educação, vice-diretores e diretores de escola, e
+            mais quaisquer perfis que interajam e tenham o poder de ajudar as
+            estudantes a enfrentarem o sistema.
+          </p>
+        </div>
+
+        <button
+          id="mulheres__b__e"
+          class="accordion"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
+          <img
+            class="mulheres__a__svg"
+            src="{% static 'img/symbols10.svg' %}"
+            alt="Símbolo ilustrativo de um círculo"
+          />
+          A EMPREGADORA
+        </button>
+        <div class="panel">
+          <img src="{% static 'img/susan.png' %}" alt="Susan Diane Wojcicki" />
+          <p class="mulheres__b__p__b">
+            Já parou para pensar por que existem tão poucas mulheres
+            programadoras, engenheiras ou cientistas? Um dos motivos conhecidos
+            é a falta de representatividade feminina no mercado de trabalho, no
+            Brasil e ao redor do mundo. As poucas mulheres que conseguem
+            alcançar cargos de liderança em tecnologia e STEM não são
+            simplesmente mulheres empregadas. São símbolo de resistência, força,
+            aptidão e talento para todas nós. Por isso, se você possui um cargo
+            de liderança em tecnologia com a habilidade de contratar outras
+            mulheres, entre para a Rede Nísia e nos ajude a hackear o sistema,
+            gerar propostas para as empresas e contratar mais mulheres para as
+            suas equipes.
+          </p>
+        </div>
+
+        <button
+          id="mulheres__b__f"
+          class="accordion"
+          data-aos="fade-up"
+          data-aos-duration="1400"
+        >
+          <img
+            class="mulheres__a__svg"
+            src="{% static 'img/symbols11.svg' %}"
+            alt="Símbolo ilustrativo de três círculos intersectados"
+          />
+          OS FACILITADORES
+        </button>
+        <div class="panel">
+          <img
+            src="{% static 'img/facilitadores.png' %}"
+            alt="Imagem ilustrativa de duas engrenagens"
+          />
+          <p class="mulheres__b__p__b">
+            Facilitadores são a força motriz que imprime ritmo e potência para a
+            rede Nísia, fazendo com que os outros perfis possam existir e
+            trabalhar em harmonia. Eles conectam as pessoas, retiram empecilhos,
+            ajudam de diferentes formas, pelo puro prazer de estarem
+            contribuindo para uma causa na qual acreditam. Facilitadores vêm em
+            todas as idades, gêneros, e de todos os lugares.
+          </p>
+        </div>
+
+        <button
+          id="mulheres__b__g"
+          class="accordion"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+        >
+          <img
+            class="mulheres__a__svg"
+            src="{% static 'img/symbols11.svg' %}"
+            alt="Imagem ilustrativa de duas engrenagens"
+          />
+          OS APOIADORES
+        </button>
+        <div class="panel">
+          <img
+            src="{% static 'img/apoiadores.png' %}"
+            alt="Imagem ilustrativa de um aperto de mão"
+          />
+          <p class="mulheres__b__p__b">
+            No momento turbulento de estudos e escolha de faculdade, cada
+            estudante precisa de todo o apoio que conseguir, na escola e em
+            casa. Os apoiadores são fundamentais no processo de autoconhecimento
+            das meninas, pois convivem com elas fora da escola e as conhecem
+            melhor do que ninguém. Os apoiadores são pais, mães, irmãos, irmãs,
+            tios, tias, avôs e avós, amigos e conhecidos que fornecem um ombro
+            amigo e apoio neste momento de vida tão relevante para o futuro das
+            estudantes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="calendario">
+      <div class="calendario__a" ata-aos="fade-up" data-aos-duration="1000">
+        <div class="calendario__sistema">
+          <h1 data-aos="fade-up" data-aos-duration="1500">CALENDÁRIO</h1>
+          <p data-aos="fade-up" data-aos-duration="1500">
+            Fique ligada nos eventos de Nísia, se inscreva e acompanhe nossas
+            redes sociais!
+          </p>
+        </div>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <div class="calendario__box">
+          <div class="calendario__box__a">
+            <h1>2021</h1>
+          </div>
+          <div class="calendario__box__b">
+            <div>
+            <h2 class="calendario__box__b__data">segundo semestre </h2>
+            <h2 class="calendario__box__b__titulo">
+              calendário EM BREVE
+            </h2>
+          </div>
+          </div>
+        </div>
+          <div class="calendario__box">
+          <div class="calendario__box__a">
+            <h1>2020</h1>
+          </div>
+          <div class="calendario__box__b">
+            {% for post in posts %}
+            <div>
+              <h2 class="calendario__box__b__data">{{ post.date_event }}</h2>
+              <h2 class="calendario__box__b__titulo">
+                {{ post.title }}
+              </h2>
+              <p>Descrição: {{ post.description }}</p>
+              <p>Local: {{ post.adress }}</p>
+              <p>Horário: {{ post.start_time }} até {{ post.end_time }}</p>
+              <p>Tipo de evento: {{ post.type_event }}</p>
+              <a href="{{ post.slug }}"><button>SAIBA MAIS</button></a>
+              <br />
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="identidade">
+      <div class="identidade__form">
+        <div
+          class="identidade__form__a"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          <h1 data-aos="fade-up" data-aos-duration="1500">
+            ENCONTRE SEU LUGAR NA REDE*
+          </h1>
+          <p data-aos="fade-up" data-aos-duration="1500">
+            Precisamos de uma força gigantesca para nos ajudar a transformar a
+            relação entre mulheres, ciência e tecnologia. Hoje, já somos mais de
+            250 pessoas que compartilham essa missão, e você pode fazer parte
+            disso.
+          </p>
+          <span data-aos="fade-up" data-aos-duration="2500">*Lembre-se: Você pode se inscrever em mais de um perfil. </span>
+        </div>
+      </div>
+      <div
+        class="identidade__form__b"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
+        <form id="registrar" action="/form">
+          {% csrf_token %}
+          <div class="identidade__input">
+            {{ form.name }} {{ form.email }} {{ form.phone }} {{form.instagram}}
+          </div>
+          <div class="identidade__form__b__a">
+            <h2>{{ form.role.label }}</h2>
+            {{ form.role }}
+          </div>
+
+          <div class="identidade__form__b__c">
+            <h2>CONTE SUA HISTÓRIA PARA A GENTE</h2>
+            <a id="yes" onclick="history()">
+              <button type="button">COMPARTILHAR</button>
+            </a>
+            <a id="no" onclick="deactivateHistory()">
+              <button type="button">NÃO COMPARTILHAR</button>
+            </a>
+            {{ form.story }}
+          </div>
+
+          <div class="identidade__form__b__b">
+            <button>ENVIAR RESPOSTA</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="modal">
+        <h2></h2>
+        <button onClick="closeModal()">FECHAR</button>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer__c">
+        <a href="https://mastertech.com.br/" style="cursor: pointer;"
+          ><img src="{% static 'img/logo.svg' %}" alt="Logo da Mastertech"
+        /></a>
+        <p>
+          Somos colecionadores de fracassos, sempre em busca do próximo. <br />
+          E entre um fracasso e outro, construímos alguns sucessos. <br />
+          Somos a Mastertech.
+        </p>
+      </div>
+
+      <div class="footer__a">
+        <div>
+          <i class="fas fa-map-marker-alt"></i>
+          <p>Av. Brigadeiro Luis Antônio, 2696 <br />Bela Vista - São Paulo/SP</p>
+        </div>
+
+        <div>
+          <i class="far fa-envelope"></i>
+          <p>nisia@mastertech.com.br</p>
+        </div>
+      </div>
+      <div class="policy-container">
+        <a href="https://mastertech.com.br/politica-de-privacidade" rel="noopener noreferrer" target="_blank">
+          Política de Privacidade
+        </a>
+        <a href="https://mastertech.com.br/politica-de-protecao-de-dados" rel="noopener noreferrer" target="_blank">
+          Política de Proteção de Dados
+        </a>
+        <a href="https://mastertech.com.br/portaldotitular" rel="noopener noreferrer" target="_blank">
+          Portal do Titular
+        </a>
+      </div>
+      <div class="footer__b">
+        <a href="https://medium.com/nisia"><i class="fab fa-medium"></i></a>
+        <a href="https://www.instagram.com/mastertechnisia/"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.sympla.com.br/mastertech"
+          ><i class="fas fa-calendar-check"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://kit.fontawesome.com/5fbcdb7af0.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/demob.js' %}"></script>
+    <script src="{% static 'js/accordion.js' %}"></script>
+    <script src="{% static 'js/animation.js' %}"></script>
+  </body>
+</html>
