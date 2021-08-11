@@ -11,7 +11,7 @@ spec:
     matchLabels:
       app: nisia
   template:
-    metadata:i
+    metadata:
       labels:
         app: nisia
     spec:
@@ -21,6 +21,34 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: 50m
+            memory: 128Mi
+          limits:
+            cpu: 50m
+            memory: 128Mi
+        readinessProbe:
+          initialDelaySeconds: 1
+          periodSeconds: 2
+          timeoutSeconds: 1
+          successThreshold: 1
+          failureThreshold: 1
+          httpGet:
+            host:
+            scheme: HTTP
+            path: /
+            port: 80
+        livenessProbe:
+          periodSeconds: 10
+          timeoutSeconds: 1
+          successThreshold: 1
+          failureThreshold: 2
+          httpGet:
+            host:
+            scheme: HTTP
+            path: /
+            port: 80
         envFrom:
         - secretRef:
             name: nisia
