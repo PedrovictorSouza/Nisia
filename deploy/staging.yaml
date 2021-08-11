@@ -6,12 +6,12 @@ metadata:
   labels:
     app: nisia
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: nisia
   template:
-    metadata:
+    metadata:i
       labels:
         app: nisia
     spec:
